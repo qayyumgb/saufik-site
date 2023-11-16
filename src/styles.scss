@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+.btn-rounded{
+    padding: 1rem 3.125rem;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    font-weight: 400;
+    margin: 0;
+    border: 1px solid white;
+    background-color: #ffffff;
+    display: block;
+    border-radius: 5px;
+    color: #262B3F;
+    &:hover{
+        background: #262B3F;
+        color: #fff;
+    }
+}

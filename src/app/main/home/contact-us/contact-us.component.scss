@@ -1,0 +1,78 @@
+// contact tabs css
+.contact-us{
+    background: #f8f8f8;
+    .contact-us-section{
+        padding: 50px 0;
+        .btn-rounded {
+            background: #1583e9 !important;
+            color: #fff !important;
+            &:hover{
+                background: #fff !important;
+                color: #1583e9 !important;
+                border: 1px solid #1583e9;
+            }
+        }
+        .title-form-contact{
+            font-weight: 500;
+            line-height: 1.3;
+            color: #151D21;
+            margin: 0;
+            font-size: 40px;
+        }
+        .sub-title-form{
+            font-size: 18px;
+            color: #898D8F;
+            margin-bottom: 18px;
+        }
+        img{
+            height: 231px;
+        width: 100%;
+        max-width: 218px;
+        margin: 0;
+        }
+        label{
+            display: block;
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #898D8F;
+        }
+    }
+    .required-label{
+        color: red;
+        margin-left: 1px;
+    }
+    .form-control{
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 2.6875rem;
+        margin: 0 0 1rem;
+        padding: 0.625rem 0.9375rem;
+        border: 1px solid #cacaca;
+        border-radius: 0;
+        background-color: #fff;
+        box-shadow: none;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+        color: #898D8F;
+        transition: box-shadow 0.5s,border-color 0.25s ease-in-out;
+        &::placeholder{
+            color: #cacaca;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        &:focus{
+            outline: none;
+    border: 1px solid #8a8a8a;
+    background-color: #e6e6e6;
+    box-shadow: none;
+    transition: box-shadow 0.5s,border-color 0.25s ease-in-out;
+        }
+        
+    }
+    
+}
