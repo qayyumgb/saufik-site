@@ -62,9 +62,157 @@
     }
 }
 
+// tools & technologies
+.tools-technologies{
+    padding: 50px 0 0 0;
+    .services-title{
+        font-size: 40px;
+        color: #151D21;
+        font-weight: 700;
+    }
+    .tech-tabs-inner{
+        background-color: #f5f6f8;
+    }
+    .tech-tabs{
+        padding: 20px 25px;
+        font-weight: 700;
+        line-height: 1;
+    }
+    .tech-list{
+        margin: 30px auto;
+        padding: 0 2px;
+    }
+    .technology-tools{
+        li{
+            list-style: none;
+    margin: 0 0 30px 0;
+    text-align: center;
+    width: 20%;
+    .tech-img{
+        background-color: #ffffff;
+        padding: 14px 20px;
+        height: 100px;
+        line-height: 66px;
+        margin-bottom: 10px;
+        border: 1px solid lightgrey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: -1px;
+    }
+        }
+        
+        img{
+            height: 60px;
+            width: 150px;
+            object-fit: contain;
+            max-width: 100%;
+        }
 
+    }
+}
+// client testimonial
+.client-testimonial{
+    .services-title{
+        font-size: 40px;
+        color: #151D21;
+        font-weight: 700;
+    }
+    .sub-title-light{
+        font-size: 1.125rem;
+        color: #9397ad;
+    }
+    .testimonial-content{
+        border-right: 1px solid #e2e5f1!important;
+        h3{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    line-height: 1.4;
+        }
+    }
+    .inner-circle{
+        box-shadow: 0 .275rem .75rem -.0625rem rgba(19,16,34,.06),0 .125rem .4rem -.0625rem rgba(19,16,34,.03)!important;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    img{
+        padding: 20px;
+    }
+    }
+}
 
+// review box styling
+.client-review{
+    padding: 50px 0 60px 0;
+    .card-box{
+        background-color: #131022;
+        padding: 4rem;
+        h1{
+    color: #1583e9;
+    font-size: 3.5rem;
+    font-weight: 700;
+        }
+        h2{
+            color: white;
+            font-weight: 700;
+        }
 
+    }
+    .review-box{
+        max-width: 260px;
+        width: 100%;
+        background-color: #1583e9;
+        border-radius: 0.5rem!important;
+        .review-text{
+            color: white;
+        }
+        i{
+            color: #ffba08;
+            margin-right: 3px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        .review-count{
+            color: white;
+            opacity: .7;
+        }
+    }
+    .card-text{
+        padding: 3rem;
+        box-shadow: 0 .275rem .75rem -.0625rem rgba(19,16,34,.06),0 .125rem .4rem -.0625rem rgba(19,16,34,.03);
+    img{
+        width: 60px;
+    border-radius: 50%;
+    height: 60px;
+    }
+    }
+    .quote-btn{
+    padding: 10px;
+    background: #1583e9;
+    box-shadow: 0 .5rem 1.125rem -.5rem rgba(79, 81, 200, 0.9);
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+    display: flex;
+    color: white;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    }
+    .para-quote{
+        font-size: 1.125rem!important;
+        font-weight: 400;
+        opacity: .8;
+    }
+    .client-det{
+        opacity: .8;
+    }
+}
 
 @media screen and (max-width: 1250px){
     .home-hero-display{
