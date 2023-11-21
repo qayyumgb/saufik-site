@@ -1,134 +1,39 @@
-// offshore styling
-.offshore-staffing{
-    padding: 50px 0px 0px 0px;
-    h2{
-        font-size: 40px;
-        color: #151D21;
-        font-weight: 700;
-    }
-}
-.talent-container {
-    background-color: #1583e9;
-    padding: 1.5rem;
-    border-radius: 15px;
-    color: white;
-    text-align: center; 
-}
 
-.talent-inner {
-    padding: 1rem 3rem;
-}
-
-.talent-card .t-sub,
-.talent-card .t-sub,
-.talent-card .t-heading {
-    margin: 0;
-}
-
-.talent-title {
-    border-top: 2px solid #262b3f;
-    border-bottom: 2px solid #262b3f;
-    padding: 10px 0px;
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 26px;
+// new UI
+.offshoring-container{
+  border-radius: 1rem;
+  background: linear-gradient(90deg,#071c4d,#002d97)!important;
+  padding: 80px 0;
+  color: white;
+  .section-heading h2{
     font-weight: 700;
+  }
+  .tagline-para{
+    letter-spacing: 0.8px;
+  }
+  .circle-shape-1 {
+    top: -280px;
+    width: 356px;
+    min-height: 356px;
+    min-width: 356px;
+    right: 70px;
+  }
+
+
+
+  .text-light-dimmed{
+    color: #d9d9d9 !important;
+  }
+  .watch-now-btn i {
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    font-size: 12px;
+    transition: all .3s ease-in-out;
+    border: 2px solid #fff;
+    margin-right: 10px;
+    border-radius: 50%;
+    color: #c0c0c5;
+  }
 }
 
-.t-icon {
-    width: 60px;
-    height: 60px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    border-radius: 16px;
-    border: 1px solid;
-    margin: 4px;
-}
-
-.technical-staff {
-    background: orange;
-    border-color: orange;
-}
-
-.timeMoney {
-    background: #01c851;
-    border-color: #01c851;
-}
-
-.t-list {
-    background: #0fcefb;
-    border-color: #0fcefb;
-}
-
-.t-icon img {
-    width: 35px;
-}
-
-.t-heading {
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.talent-subtitle {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.t-sub {
-    font-size: 16px;
-}
-
-.t-sub, .talent-subtitle {
-    font-weight: 500;
-}
-
-.talent-subtitle {
-    margin-bottom: 2rem;
-}
-
-.t-border {
-    border-radius: 16px;
-    border: 1.9px solid;
-}
-
-.firstBox {
-    border-color: orange;
-}
-
-.secBox {
-    border-color: #01c851;
-}
-
-.lastBox {
-    border-color: #0fcefb;
-}
-
-.talent-footer a {
-    padding: 16px 56px;
-    font-size: 18px;
-    cursor: pointer;
-    color: #0D45B6;
-}
-
-    .talent-footer a:hover {
-        background: #0D45B6 !important;
-        border: 1px solid #fff !important;
-        color: white;
-    }
-
-.talent-card {
-    width: 330px;
-}
-
-.technical-staff img {
-    width: 28px !important;
-}
-.talent-footer{
-    .btn-rounded{
-        color: #1583e9 !important;
-        &:hover{
-            color: #fff !important;
-        }
-    } 
-}

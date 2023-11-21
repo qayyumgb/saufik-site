@@ -1,17 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
-.btn-rounded{
-    padding: 1rem 3.125rem;
-    font-size: 0.875rem;
-    line-height: 1rem;
-    font-weight: 400;
-    margin: 0;
-    border: 1px solid white;
-    background-color: #ffffff;
-    display: block;
-    border-radius: 5px;
-    color: #262B3F;
-    &:hover{
-        background: #262B3F;
-        color: #fff;
-    }
+.btn-rounded {
+  padding: 1rem 3.125rem;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 400;
+  margin: 0;
+  border: 1px solid white;
+  background-color: #ffffff;
+  display: block;
+  border-radius: 5px;
+  color: #262B3F;
+
+  &:hover {
+    background: #262B3F;
+    color: #fff;
+  }
+}
+
+.fw-1 {
+  font-weight: 100 !important;
+}
+
+.fw-2 {
+  font-weight: 200 !important;
+}
+
+.fw-3 {
+  font-weight: 300 !important;
+}
+
+.fw-4 {
+  font-weight: 400 !important;
+}
+
+.fw-5 {
+  font-weight: 500 !important;
+}
+
+.fw-6 {
+  font-weight: 600 !important;
+}
+
+.fw-7 {
+  font-weight: 700 !important;
+}
+
+.fw-8 {
+  font-weight: 800 !important;
+}
+
+.fw-9 {
+  font-weight: 900 !important;
 }
