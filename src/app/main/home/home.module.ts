@@ -7,6 +7,7 @@ import { SaufikServicesComponent } from './saufik-services/saufik-services.compo
 import { SaufikOffshoreStaffingComponent } from './saufik-offshore-staffing/saufik-offshore-staffing.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SaufikExpertiseComponent } from './saufik-expertise/saufik-expertise.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -18,8 +19,9 @@ import { SaufikExpertiseComponent } from './saufik-expertise/saufik-expertise.co
     SaufikExpertiseComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     HomeRoutingModule
+    
   ],
   exports: [
     SaufikServicesComponent

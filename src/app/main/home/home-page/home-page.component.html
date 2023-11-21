@@ -43,7 +43,7 @@
 </div>
 <!-- header and video section end -->
 <!-- logo section -->
-<div class="logo-sec">
+<div class="logo-sec section-top-inner-space section-bottom-inner-space">
   <div class="teams">
     <div class="teams__heading mb-4">
       <p class="teams__title text-center">TRUSTED BY SOME OF THE WORLD’S BEST TEAMS</p>
@@ -84,60 +84,35 @@
 <div class="tools-technologies">
   <h2 class="services-title text-center mb-5">Tools & Technologies</h2>
   <div class="container">
-    <div class="tech-tabs-inner d-flex align-items-center justify-content-around flex-wrap mx-3">
-      <div class="tech-tabs">Platforms &amp; Frameworks</div>
-      <div class="tech-tabs">Programming Languages</div>
-      <div class="tech-tabs">Database &amp; Reporting</div>
-    </div>
     <div class="tech-details mx-3">
       <div class="technology-tools">
-        <ul class="tech-list d-flex flex-wrap">
-          <li>
+        <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/aws.webp"></div>
-          </li>
-          <li>
+          </ng-template>  
+          <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/ad.webp"></div>
-          </li>
-          <li>
-            <div class="tech-img"><img class="" src="../../../../assets/images/aem.webp"></div>
-          </li>
-          <li>
+          </ng-template>  
+          <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/as.webp"></div>
-          </li>
-          <li>
+          </ng-template>  
+          <ng-template carouselSlide>
             <div class="tech-img"><img src="../../../../assets/images/gc.webp"></div>
-          </li>
-          <li>
+          </ng-template>  
+          <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/kotlin.webp"></div>
-          </li>
-          <li>
+          </ng-template>  
+          <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/aws.webp"></div>
-          </li>
-          <li>
+          </ng-template>  
+          <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/ad.webp"></div>
-          </li>
-          <li>
-            <div class="tech-img"><img class="" src="../../../../assets/images/as.webp"></div>
-          </li>
-          <li>
-            <div class="tech-img"><img class="" src="../../../../assets/images/gc.webp"></div>
-          </li>
-          <li>
-            <div class="tech-img"><img class="" src="../../../../assets/images/kotlin.webp"></div>
-          </li>
-          <li>
+          </ng-template>  
+          <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/aws.webp"></div>
-          </li>
-          <li>
-            <div class="tech-img"><img class="" src="../../../../assets/images/ad.webp"></div>
-          </li>
-          <li>
-            <div class="tech-img"><img class="" src="../../../../assets/images/as.webp"></div>
-          </li>
-          <li>
-            <div class="tech-img"><img class="" src="../../../../assets/images/gc.webp"></div>
-          </li>
-        </ul>
+          </ng-template>  
+        </owl-carousel-o>
+       
       </div>
     </div>
 
