@@ -1,0 +1,272 @@
+.dev-background {
+    background-image: url(../../../../assets/images/banner-dev.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+
+.background-overlay,
+.blue-overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.background-overlay {
+    background: linear-gradient(90deg, rgba(7, 28, 77, 0.7098039216), rgba(0, 45, 151, 0.5215686275)) !important;
+}
+
+.banner-text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    h1 {
+        color: #fff;
+        font-size: 44px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 20px;
+        color: #fff;
+    }
+}
+
+.description-dev {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    h2 {
+        color: #1583e9;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 20px;
+        color: #020101;
+        line-height: 1.8em;
+    }
+}
+
+.software-dev-sec {
+    padding: 80px 0;
+    background-image: url(../../../../assets/images/digital-services-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.blue-overlay {
+    background-color: #F5F9FF;
+    opacity: 0.88;
+}
+
+.services-btn-round {
+    padding: 40px 0 0 0;
+
+    span:first-child {
+        margin-right: 20px;
+    }
+}
+
+.nav-tabs a {
+
+    color: #1583e9;
+    border: 1px solid #1583e9;
+    width: 100%;
+    display: block;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 340px;
+    padding: 0.6rem;
+    cursor: pointer;
+    margin-right: 20px;
+    background: transparent;
+
+    &:hover {
+        background-color: #1583e9;
+        color: white;
+    }
+}
+
+.nav-tabs .active {
+    background-color: #1583e9;
+    color: white;
+}
+
+.service-card {
+    background: #1583e9;
+    border-radius: 25px;
+    padding: 55px;
+    max-width: 513px;
+    min-height: 456px;
+
+    img {
+        width: 52px;
+        height: 100%;
+        max-height: 58px;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.55;
+        color: white;
+        margin: 20px 0;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.71;
+        color: white;
+        text-align: left;
+    }
+}
+
+.heading-main {
+    color: #1583e9;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.15em;
+}
+
+.advantages,
+.operating-models,
+.operating-modes {
+    padding: 70px 0;
+}
+
+.advantage-card {
+    max-width: 400px;
+    width: 100%;
+    padding: 25px 35px;
+    height: 350px;
+
+    h6 {
+        font-size: 22px;
+        line-height: 1.2em;
+    }
+
+    p {
+        font-size: 18px;
+        color: #2a2a2a;
+        line-height: 1.8em;
+    }
+
+    &:hover {
+        border-style: solid;
+        border-width: 10px 0px 0px 0px;
+        border-color: #1583e9;
+        box-shadow: 0px 0px 10px 0px #D3D3D3;
+        border-radius: 20px 20px 20px 20px;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.operating-models {
+    background-color: #F5F9FF;
+}
+
+.operating-modes {
+    img {
+        max-width: 450px;
+        width: 100%;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            opacity: 0.5;
+        }
+    }
+
+    p {
+        color: #2A2A2A;
+        line-height: 1.6em;
+        font-size: 20px
+    }
+
+    h4 {
+        font-size: 26px;
+        line-height: 34px;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+        color: #1583e9;
+    }
+}
+
+.featured-industries {
+    padding: 60px 0;
+
+    .feature-btn {
+        display: flex;
+        align-items: center;
+        background: #f5f6f8;
+        background: #F7FBFF;
+        margin-right: 30px;
+        padding: 20px 35px;
+        border-radius: 46px;
+        width: 350px;
+        margin-bottom: 30px;
+
+        img {
+            margin-right: 12px;
+        }
+
+        span {
+            font-size: 23px;
+            font-weight: 500;
+            line-height: 1.35;
+            letter-spacing: 0.29px;
+            color: #000;
+        }
+    }
+}
+
+.sub-para {
+    color: #2a2a2a;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.get-started {
+    h1 {
+        color: #54595F;
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    .btn-rounded {
+        background-color: #1583e9;
+        color: #fff;
+
+        &:hover {
+            background-color: #fff;
+            color: #1583e9;
+            border: 1px solid #1583e9;
+        }
+    }
+}
+@media screen and (max-width: 425px){
+    .advantage-card{
+        p{
+            font-size: 16px;
+        }
+    }
+    .nav-tabs a{
+        width: 300px;
+        margin-right: 0;
+    }
+}
