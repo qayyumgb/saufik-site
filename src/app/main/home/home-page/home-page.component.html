@@ -2,51 +2,80 @@
 
 <div class="position-relative">
   <div class="home-hero-wrapper">
-    <video autoplay loop muted plays-inline class="background-video w-100">
-      <source src="../../../../assets/images/saufik-hero-bg.mp4" type="video/mp4" />
-    </video>
-    <div class="content-hero">
-      <div class="home-hero-display--intro">
-        <h1>
-          Generative AI:<br> unleashing possibilities
-        </h1>
-      </div>
-      <div class="home-hero-display--description mt-lg-3 mt-md-2">
-        <div class="">
-          Next-level personalized experience and<br> hyper-automation excellence
+    <owl-carousel-o [options]="heroCarousel">
+      <ng-template carouselSlide>
+        <video autoplay loop muted plays-inline class="background-video w-100">
+          <source src="../../../../assets/images/saufik-hero-bg.mp4" type="video/mp4" />
+        </video>
+
+        <div class="content-hero">
+          <div class="home-hero-display--intro">
+            <h1>
+              Generative AI:<br> unleashing possibilities
+            </h1>
+          </div>
+          <div class="home-hero-display--description mt-lg-3 mt-md-2">
+            <div class="">
+              Next-level personalized experience and<br> hyper-automation excellence
+            </div>
+          </div>
+
         </div>
-      </div>
-      <div>
-      </div>
-    </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <video autoplay loop muted plays-inline class="background-video w-100">
+          <source src="../../../../assets/images/saufik-hero-2.mp4" type="video/mp4" />
+        </video>
+
+        <div class="content-hero">
+          <div class="home-hero-display--intro">
+            <h1>
+              Powerful Web &<br>Mobile App Start-to-End
+            </h1>
+          </div>
+          <div class="home-hero-display--description mt-lg-3 mt-md-2">
+            <div class="">
+              Next-level personalized experience and<br> hyper-automation excellence
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+
+
+    </owl-carousel-o>
+
+
     <div class="link-icon-wrapper" style="position: absolute;">
 
-              <h5 class="item-title mbr-fonts-style pb-1 display-2">Let's Start with <span>SAUFIK</span></h5>
+      <h5 class="item-title mbr-fonts-style pb-1 display-2">Let's Start with <span>SAUFIK</span></h5>
 
-<div style=" display: flex;">
-    <button _ngcontent-ng-c3692043194="" type="button" class="btn-rounded home-hero-display--lets-talk text-uppercase"> LEARN MORE </button>
-    <button _ngcontent-ng-c3692043194="" type="button" class="btn-rounded home-hero-display--lets-talk text-uppercase" style="
+      <div style=" display: flex;">
+        <button _ngcontent-ng-c3692043194="" type="button"
+          class="btn-rounded home-hero-display--lets-talk text-uppercase"> LEARN MORE </button>
+        <button _ngcontent-ng-c3692043194="" type="button"
+          class="btn-rounded home-hero-display--lets-talk text-uppercase" style="
     background: #151d21;"> Watch Video </button>
-</div>
+      </div>
 
-              <div class="icon-wrap">
-                <a href="#"><span class="mbr-iconfont mbr-iconfont-btn mobi-mbri-down mobi-mbri"></span></a>
-              </div>
+      <div class="icon-wrap">
+        <a href="#"><span class="mbr-iconfont mbr-iconfont-btn mobi-mbri-down mobi-mbri"></span></a>
+      </div>
 
-              <svg class="svg2" viewBox="0 0 100 100">
-                <path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" style="fill: #fff;"></path>
-              </svg>
-            </div>
+      <svg class="svg2" viewBox="0 0 100 100">
+        <path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" style="fill: #fff;"></path>
+      </svg>
+    </div>
   </div>
 
-  
+
 </div>
 <!-- header and video section end -->
 <!-- logo section -->
 <div class="logo-sec section-top-inner-space section-bottom-inner-space">
-  <div class="teams">
+  <div class="teams ">
     <div class="teams__heading mb-4">
-      <p class="teams__title text-center">TRUSTED BY SOME OF THE WORLD’S BEST TEAMS</p>
+      <p class="teams__title  text-center">TRUSTED BY SOME OF THE WORLD’S BEST TEAMS</p>
     </div>
     <div class="d-flex align-items-center justify-content-center flex-wrap">
       <div class="trusted-team-inner">
@@ -82,45 +111,80 @@
 <app-saufik-expertise></app-saufik-expertise>
 <!-- technologies section -->
 <div class="tools-technologies">
-  <h2 class="services-title text-center mb-5">Tools & Technologies</h2>
+  <h2 class=" section-title mb-5 text-center">Tools & Technologies</h2>
   <div class="container">
     <div class="tech-details mx-3">
       <div class="technology-tools">
         <owl-carousel-o [options]="customOptions">
           <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/aws.webp"></div>
-          </ng-template>  
+          </ng-template>
           <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/ad.webp"></div>
-          </ng-template>  
+          </ng-template>
           <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/as.webp"></div>
-          </ng-template>  
+          </ng-template>
           <ng-template carouselSlide>
             <div class="tech-img"><img src="../../../../assets/images/gc.webp"></div>
-          </ng-template>  
+          </ng-template>
           <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/kotlin.webp"></div>
-          </ng-template>  
+          </ng-template>
           <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/aws.webp"></div>
-          </ng-template>  
+          </ng-template>
           <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/ad.webp"></div>
-          </ng-template>  
+          </ng-template>
           <ng-template carouselSlide>
             <div class="tech-img"><img class="" src="../../../../assets/images/aws.webp"></div>
-          </ng-template>  
+          </ng-template>
         </owl-carousel-o>
-       
+
       </div>
     </div>
 
   </div>
 </div>
+<!-- new section -->
+<section class="section-bottom-inner-space services-title text-center">
+  <div class="container">
+    <h2 class="section-title text-center d-none">With all the Features You Need</h2>
+    <p class="text-center d-none">
+      Credibly grow premier ideas rather than bricks-and-clicks strategic theme areas distributed for stand-alone
+      web-readiness.</p>
+    <div class="row pt-lg-5 pt-3">
+      <div class="col-lg-6 mt-4">
+        <div class="position-relative d-flex flex-column h-100 flex-wrap bg-danger-soft p-5 rounded-custom">
+          <div class="cta-left-info mb-2">
+            <h5>Utilize your software data</h5>
+            <p> Progressively reinvent models and niche revolutionary benefits for integrated niches. </p>
+          </div>
+          <div class="mt-auto"><a href="/request-for-demo" class="btn btn-outline-primary btn-sm">Start For Free</a>
+          </div>
+          <div class="cta-img position-absolute right-0 bottom-0"><img
+              src="https://quiety-vue.themetags.com/img/cta-img-1.ed72957e.png" alt="cta img" class="img-fluid"></div>
+        </div>
+      </div>
+      <div class="col-lg-6 mt-4">
+        <div class="position-relative d-flex flex-column h-100 flex-wrap bg-primary-soft p-5 rounded-custom">
+          <div class="cta-left-info mb-2">
+            <h5>Get real time updated anytime</h5>
+            <p> Progressively reinvent models and niche revolutionary benefits for integrated niches. </p>
+          </div>
+          <div class="mt-auto"><a href="/request-for-demo" class="btn btn-outline-primary btn-sm">Start For Free</a>
+          </div>
+          <div class="cta-img position-absolute right-0 bottom-0"><img
+              src="https://quiety-vue.themetags.com/img/cta-img-2.5414f577.png" alt="cta img" class="img-fluid"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- why choose us -->
-<div class="client-testimonial container">
-  <h2 class="services-title text-center mb-4">Why Choose Us?</h2>
+<div class="client-testimonial container section-bottom-inner-space">
+  <h2 class="services-title text-center mb-4 section-title">Why Choose Us?</h2>
   <p class="sub-title-light text-center">We personalize how we work to fit your project needs. Our approach helps
     augment innovation.</p>
   <div class="d-flex justify-content-around align-items-center my-4 flex-md-nowrap flex-wrap">
@@ -174,6 +238,7 @@
     </div>
   </div>
 </div>
+
 <!-- client review section -->
 <div class="client-review">
   <div class="container">
@@ -181,37 +246,40 @@
       <div class="col-lg-5">
         <div class="card card-box">
           <h1 class="mt-4">200+</h1>
-        <h2>Clients Already Served</h2>
-        <div class="review-box py-3 px-4 mt-5 mb-4">
-          <div class="d-flex justify-content-between align-items-start flex-wrap">
-            <div>
-              <p class="text-uppercase review-text mb-2">Reviewed on</p>
-              <img src="../../../../assets/images/clutch.svg" alt="">
-            </div>
-            <div>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <p class="review-count mt-2 mb-0">49 reviews</p>
+          <h2>Clients Already Served</h2>
+          <div class="review-box py-3 px-4 mt-5 mb-4">
+            <div class="d-flex justify-content-between align-items-start flex-wrap">
+              <div>
+                <p class="text-uppercase review-text mb-2">Reviewed on</p>
+                <img src="../../../../assets/images/clutch.svg" alt="">
+              </div>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p class="review-count mt-2 mb-0">49 reviews</p>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
       <div class="col-lg-7">
         <div class="card card-text border-0">
           <span class="quote-btn"><i class="fa-solid fa-quote-left"></i></span>
-        <p class="my-5 para-quote">Ac at sed sit senectus massa. Massa ante amet ultrices magna porta tempor. Aliquet diam in et magna ultricies mi at. Lectus enim, vel enim egestas nam pellentesque et leo. Elit mi faucibus laoreet aliquam pellentesque sed aliquet integer massa. Orci leo tortor ornare id mattis auctor aliquam volutpat aliquet. Odio lectus viverra eu blandit nunc malesuada vitae eleifend pulvinar.</p>
-         <div class="d-flex align-items-center">
-        <img src="../../../../assets/images/avatar.jpg">
-        <div class="mx-3">
-          <h5 class="mb-2">Annette Black</h5>
-          <p class="mb-0 client-det">Strategic Advisor at Ipsum Ltd.</p>
+          <p class="my-5 para-quote">Ac at sed sit senectus massa. Massa ante amet ultrices magna porta tempor. Aliquet
+            diam in et magna ultricies mi at. Lectus enim, vel enim egestas nam pellentesque et leo. Elit mi faucibus
+            laoreet aliquam pellentesque sed aliquet integer massa. Orci leo tortor ornare id mattis auctor aliquam
+            volutpat aliquet. Odio lectus viverra eu blandit nunc malesuada vitae eleifend pulvinar.</p>
+          <div class="d-flex align-items-center">
+            <img src="../../../../assets/images/avatar.jpg">
+            <div class="mx-3">
+              <h5 class="mb-2">Annette Black</h5>
+              <p class="mb-0 client-det">Strategic Advisor at Ipsum Ltd.</p>
+            </div>
+          </div>
         </div>
-        </div>
-      </div>
       </div>
     </div>
 

@@ -34,4 +34,18 @@ export class HomePageComponent {
         }
     }
   }
+  heroCarousel: OwlOptions = {
+    center: true,
+    items:1,
+    loop:true,
+    margin:0,
+    nav:true,
+    dots:false,
+    autoplay: false,
+    autoplayTimeout: 6000,
+    autoplaySpeed: 1000,
+    autoplayHoverPause: true,
+    navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+
+  }
 }

@@ -71,3 +71,38 @@
 .section-bottom-outer-space{
     margin-bottom: 100px;
 }
+.section-title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.right-0{
+  right: 0;
+}
+.rounded-custom{
+  border-radius: 30px;
+}
+.btn{
+  border-radius: 50px;
+  padding:.5rem 1.5rem;
+}
+.home-hero-wrapper{
+.owl-nav{
+  display: flex !important;
+  bottom: 30px;
+  position: absolute;
+  justify-content: end;
+  right: 2rem;
+
+  .owl-prev,
+  .owl-next{
+    background-color: transparent !important;
+    border: 2px solid white;
+    border-radius: 50px !important;
+    width: 50px;
+    height: 50px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
+}

@@ -5,15 +5,15 @@
         color: #fff;
         font-weight: bold;
     }
-   
-   
+
+
 }
 .home-hero-display--description{
     color: #fff;
 }
 .background-video,.home-hero-wrapper{
     object-fit: cover;
-    height: 90vh;
+    height: 96vh;
 }
 .home-hero-display--description{
     font-size: 1.5rem;
@@ -29,8 +29,9 @@
     position: absolute;
     width: 100%;
     background: linear-gradient(90deg,#071c4db5,#002d9785)!important;
-    height: 100%;
+    height: calc(100% - 5px);
     padding-bottom: 12rem;
+
 }
 .overlay {
     background-color: rgba(0, 0, 0, 0.5);
@@ -59,15 +60,16 @@
     }
 }
 .teams{
-    .teams__title {
-        font-size: 20px;
-    font-weight: 600;
-    color: #151D21
-    }
+  .teams__title {
+    font-size: 20px;
+font-weight: 600;
+color: #151D21
+}
+
         .trusted-team-inner {
             padding: 0 14px 20px;
             cursor: pointer;
-    
+
             img {
                 max-width: 135px;
                 width: 100%;
@@ -85,12 +87,7 @@
 
 // tools & technologies
 .tools-technologies{
-    padding: 50px 0 0 0;
-    .services-title{
-        font-size: 40px;
-        color: #151D21;
-        font-weight: 700;
-    }
+
     .tech-tabs-inner{
         background-color: #f5f6f8;
     }
@@ -127,11 +124,7 @@
 }
 // client testimonial
 .client-testimonial{
-    .services-title{
-        font-size: 40px;
-        color: #151D21;
-        font-weight: 700;
-    }
+
     .sub-title-light{
         font-size: 1.125rem;
         color: #9397ad;
@@ -253,7 +246,7 @@
     position: absolute;
     left: -1px;
     padding: 1rem 2rem;
-    bottom: -1px;
+    bottom: -8px;
     background: #ffffff;
     display: flex;
     flex-direction: column;
@@ -281,4 +274,20 @@ svg.svg2 {
     width: 40px;
     bottom: 0;
     right: -40px;
+}
+.img-fluid, .img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+.cta-img {
+  width: 35%!important;
+}
+.cta-left-info {
+  width: 65%!important;
+}
+.bg-primary-soft{
+  background-color: rgba(23,92,255,.2);
+}
+.bg-danger-soft{
+  background-color: rgba(242,87,103,.2);
 }

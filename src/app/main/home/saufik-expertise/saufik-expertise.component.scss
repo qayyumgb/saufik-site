@@ -1,6 +1,5 @@
 // expertise section
 .saufik-expertise-container{
-    padding: 50px 0 0 0;
     h1{
         font-size: 40px;
         color: #151D21;
@@ -40,30 +39,30 @@
     text-align: end;
     position: relative;
   }
-  
+
   .exp-images p{
     font-size: 15px;
     line-height: 1.3;
   }
-  
+
   .expertise-items .exp-images:hover p,
   .expertise-items .exp-images:hover img{
     opacity: 1;
     text-align: center;
   }
-  
+
   .expertise-items .exp-images:hover{
     transition: all .2s ease-in-out;
     background: #0062ccbf;
   }
-  
+
   .expertise-items p{
     color: white;
     line-height: 1.3;
     opacity: 0;
     display: block;
   }
-  
+
   .expertise-items .imgcircle {
     height: 65px;
     width: 65px;
@@ -74,7 +73,7 @@
     justify-content: center;
     position: relative;
   }
-  
+
   .expertise-items:hover h4{
     color: white;
   }
@@ -85,10 +84,10 @@
     transform: translateY(-9px);
     transition: 0.5s;
   }
-  
+
   .expertise-items:hover .expertise-icons{
       transform: translateY(-9px);
-      
+
   }
   .expertise-items:after{
     position: absolute;
@@ -108,7 +107,7 @@
     transform: scale(1);
     opacity: 1!important;
   }
-  
+
   .expertise-items:hover:before {
     background: black;
     content: "";
@@ -140,7 +139,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
   }
-  
+
   .expertise-inner i {
     color: white;
     font-size: 31px;
