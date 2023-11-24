@@ -1,4 +1,4 @@
-
+@import '../../../../assets/variable.scss';
 // new UI
 .offshoring-container{
   background: linear-gradient(90deg,#071c4d,#002d97)!important;
@@ -36,3 +36,11 @@
   }
 }
 
+@media (max-width: $mobile){
+.section-heading{
+  h4{
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+}

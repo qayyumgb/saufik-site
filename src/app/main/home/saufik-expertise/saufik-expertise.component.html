@@ -1,181 +1,69 @@
 <!-- area of expertise -->
 
 <div class="saufik-expertise-container section-bottom-inner-space">
-    <div class="saufik-expertise-wrapper sections-space pb-0">
+  <div class="saufik-expertise-wrapper sections-space pb-0">
 
-      <div class="position-relative expertise-heading mb-4 px-lg-0 px-3">
-        <h1 class="saufikSections-mainHeading text-center section-title">Our areas of expertise</h1>
+    <div class="position-relative expertise-heading mb-4 px-lg-0 px-3">
+      <h1 class="saufikSections-mainHeading text-center section-title">Our areas of expertise</h1>
+    </div>
+
+    <div class="expertise_inner overflow-hidden position-relative">
+      <div class="expertise-img ">
+        <div class="w-100 expertise-bg position-absolute"></div>
+        <div class="over-lay"></div>
       </div>
-
-      <div class="expertise_inner overflow-hidden position-relative">
-        <div class="expertise-img ">
-          <div class="w-100 expertise-bg position-absolute"></div>
-          <div class="over-lay"></div>
-        </div>
-        <div class="experties-items-container">
-          <div class="expertise-items exp-1">
+      <div class="experties-items-container " (resize)="resizeMehod()">
+       <ng-container *ngIf="!isMobile">
+        <ng-container *ngFor="let item of expertiesDetail; let i = index" >
+          <div class="expertise-items exp-{{i}}">
             <div class="exp-images" href="#">
               <p class="text-left invisible">In publishing and graphic design, Lorem
                 ipsum is a
                 placeholder text commonly used to demonstrate</p>
               <div
-                class="d-flex align-items-center justify-content-between expertise-main-content expertise-icons flex-wrap">
-                <div class="imgcircle"><img width="30" src="../../../../assets/images/Automationicon-01.svg">
+                class="saufik-expert d-flex align-items-center justify-content-between expertise-main-content expertise-icons flex-wrap">
+                <div class="imgcircle"><img width="30" src="../../../../assets/images/{{item.icon}}">
                 </div>
                 <div class="expertise-name">
-                  <h4 class="">Automation</h4>
+                  <h4 class="">{{item.name}}</h4>
                 </div>
               </div>
 
             </div>
 
           </div>
-          <div class="expertise-items exp-2">
-            <div class="exp-images" href="#">
-              <p class="text-left invisible">In publishing and graphic design, Lorem
-                ipsum is a
-                placeholder text commonly used to demonstrate</p>
-              <div class="d-flex align-items-center justify-content-between expertise-icons">
-                <div class="imgcircle"><img width="30" src="../../../../assets/images/healthcareicon-02.svg">
+        </ng-container>
+      </ng-container>
+      <ng-container *ngIf="isMobile">
+
+        <owl-carousel-o [options]="heroCarousel">
+          <ng-container *ngFor="let item of expertiesDetail; let i = index" >
+          <ng-template carouselSlide>
+              <div class="expertise-items exp-{{i}}">
+                <div class="exp-images" href="#">
+                  <p class="text-left invisible">In publishing and graphic design, Lorem
+                    ipsum is a
+                    placeholder text commonly used to demonstrate</p>
+                  <div
+                    class="saufik-expert d-flex align-items-center justify-content-between expertise-main-content expertise-icons flex-wrap">
+                    <div class="imgcircle"><img width="30" src="../../../../assets/images/{{item.icon}}">
+                    </div>
+                    <div class="expertise-name">
+                      <h4 class="">{{item.name}}</h4>
+                    </div>
+                  </div>
+
                 </div>
-                <div class="expertise-name">
-                  <h4 class="">Health Care</h4>
-                </div>
+
               </div>
-
-            </div>
-
-          </div>
-          <div class="expertise-items exp-3">
-            <div class="exp-images" href="#">
-              <p class="text-left invisible">In publishing and graphic design, Lorem
-                ipsum is a
-                placeholder text commonly used to demonstrate</p>
-              <div class="d-flex align-items-center justify-content-between expertise-icons">
-                <div class="imgcircle"><img width="30" src="../../../../assets/images/manufacturingicon-03.svg">
-                </div>
-                <div class="expertise-name">
-                  <h4 class="">Manufacturing</h4>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-          <div class="expertise-items exp-4">
-            <div class="exp-images" href="#">
-              <p class="text-left invisible">In publishing and graphic design, Lorem
-                ipsum is a
-                placeholder text commonly used to demonstrate</p>
-              <div class="d-flex align-items-center justify-content-between expertise-icons">
-                <div class="imgcircle"><img width="30" src="../../../../assets/images/realestateicon-04.svg">
-                </div>
-                <div class="expertise-name">
-                  <h4 class="">Real Estate</h4>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-          <div class="expertise-items exp-5">
-            <div class="exp-images" href="#">
-              <p class="text-left invisible">In publishing and graphic design, Lorem
-                ipsum is a
-                placeholder text commonly used to demonstrate</p>
-              <div class="d-flex align-items-center justify-content-between expertise-icons">
-                <div class="imgcircle"><img width="30" src="../../../../assets/images/HRicon-05.svg"></div>
-                <div class="expertise-name">
-                  <h4 class="">Human Resources</h4>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="expertise-items exp-6">
-            <div class="exp-images" href="#">
-              <p class="text-left invisible">In publishing and graphic design, Lorem
-                ipsum is a
-                placeholder text commonly used to demonstrate</p>
-              <div class="d-flex align-items-center justify-content-between expertise-icons">
-                <div class="imgcircle"><img width="30" src="../../../../assets/images/educationicon-06.svg">
-                </div>
-                <div class="expertise-name">
-                  <h4 class="">Education</h4>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-          <div class="expertise-items exp-7">
-            <div class="exp-images" href="#">
-              <p class="text-left invisible">In publishing and graphic design, Lorem
-                ipsum is a
-                placeholder text commonly used to demonstrate</p>
-              <div class="d-flex align-items-center justify-content-between expertise-icons">
-                <div class="imgcircle"><img width="30" src="../../../../assets/images/devOpsicon-07.svg"></div>
-                <div class="expertise-name">
-                  <h4 class="">DevOps</h4>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-          <div class="expertise-items exp-8">
-            <div class="exp-images" href="#">
-              <p class="text-left invisible">In publishing and graphic design, Lorem
-                ipsum is a
-                placeholder text commonly used to demonstrate</p>
-              <div class="d-flex align-items-center justify-content-between expertise-icons">
-                <div class="imgcircle"><img width="30" src="../../../../assets/images/leadsicon-08.svg"></div>
-                <div class="expertise-name">
-                  <h4 class="">Leads Management</h4>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-          <div class="expertise-items exp-9">
-            <div class="exp-images" href="#">
-              <p class="text-left invisible">In publishing and graphic design, Lorem
-                ipsum is a
-                placeholder text commonly used to demonstrate</p>
-              <div class="d-flex align-items-center justify-content-between expertise-icons">
-                <div class="imgcircle"><img width="30" src="../../../../assets/images/mediaadsicon-09.svg">
-                </div>
-                <div class="expertise-name">
-                  <h4 class="">Media Ads</h4>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-          <div class="expertise-items exp-10">
-            <div class="exp-images" href="#">
-              <p class="text-left invisible">In publishing and graphic design, Lorem
-                ipsum is a
-                placeholder text commonly used to demonstrate</p>
-              <div class="d-flex align-items-center justify-content-between expertise-icons">
-                <div class="imgcircle"><img width="30" src="../../../../assets/images/ecommerceicon-10.svg">
-                </div>
-                <div class="expertise-name">
-                  <h4 class="">eCommerce</h4>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
+            </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+      </ng-container>
 
       </div>
 
     </div>
+
   </div>
+</div>
