@@ -8,6 +8,9 @@ import { SaufikOffshoreStaffingComponent } from './saufik-offshore-staffing/sauf
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SaufikExpertiseComponent } from './saufik-expertise/saufik-expertise.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { CareersPageComponent } from './careers-page/careers-page.component';
+import { SoftwareDevComponent } from './software-dev/software-dev.component';
+import { JobDetailPageComponent } from './job-detail-page/job-detail-page.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
     SaufikServicesComponent,
     SaufikOffshoreStaffingComponent,
     ContactUsComponent,
-    SaufikExpertiseComponent
+    SaufikExpertiseComponent,
+    CareersPageComponent,
+    SoftwareDevComponent,
+    JobDetailPageComponent
   ],
   imports: [
     SharedModule,
