@@ -58,9 +58,9 @@ export class HomePageComponent {
     dots:false,
     autoplay: false,
     autoplayTimeout: 6000,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     autoplayHoverPause: true,
-    navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+    navText: ['<i class="fa fa-arrow-left-long"></i>', '<i class="fa fa-arrow-right-long"></i>'],
 
   }
 }

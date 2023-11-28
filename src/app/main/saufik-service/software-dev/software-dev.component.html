@@ -1,4 +1,3 @@
-<app-menu-bar></app-menu-bar>
 <div class="dev-background position-relative">
     <div class="background-overlay"></div>
     <div class="container banner-text d-flex align-items-center">
@@ -46,7 +45,7 @@
     <div class="blue-overlay"></div>
     <div class="container position-relative">
         <div class="row">
-            <h2 class="heading-2">Our Services</h2>
+            <h2 class="section-title">Our Services</h2>
             <div class="col-lg-7 mt-5">
                 <ul class="nav nav-tabs border-0 justify-content-center">
                     <li class="nav-item">
@@ -116,7 +115,7 @@
 <div class="advantages section-top-inner-space section-bottom-inner-space">
     <div class="container">
         <div class="text-center">
-            <h2 class="heading-2 font-30">Accelerate your software development.</h2>
+            <h2 class="section-title">Accelerate your software development.</h2>
         </div>
 
         <div class="w-layout-grid mx-lg-5 px-lg-5">
@@ -183,7 +182,7 @@
 <div class="tech-languages section-bottom-inner-space">
     <div class="container">
         <div class="text-center">
-            <h2 class="heading-2 mb-3 font-30">With technology that’s here to stay.</h2>
+            <h2 class=" section-title mb-3 ">With technology that’s here to stay.</h2>
             <p class="sub-para mb-0 font-16">Get an unbiased perspective on the best frameworks and tools for your
                 project.</p>
             <p class="sub-para mb-0 font-16">With 70+ completed projects, we’ve seen enough to save you from trouble.
@@ -220,7 +219,7 @@
 <div class="strategy-flow section-top-inner-space">
     <div class="container d-flex justify-content-center align-items-center flex-column">
         <div class="text-center">
-            <h2 class="heading-2 mb-3 font-30">Our secret?</h2>
+            <h2 class="section-title mb-3 font-30">Our secret?</h2>
             <h2 class="heading-2 mb-3 font-30">90% of iteration goals contribute to product goals.</h2>
             <p class="sub-para mb-0 font-16">Sounds simple, yet barely anyone in the industry even measures it.</p>
             <p class="sub-para font-16">For us, that's the primary thing that keeps our focus on what's needed for your
@@ -233,7 +232,7 @@
 </div>
 <div class="featured-industries section-bottom-inner-space section-top-inner-space">
     <div class="container">
-        <h2 class="mb-5 heading-2 text-center font-30">Featured Industries</h2>
+        <h2 class="mb-5 section-title text-center font-30">Featured Industries</h2>
         <div class="features-detail d-flex justify-content-center flex-wrap">
             <div class="feature-btn">
                 <img src="../../../../assets/images/education-feature.svg" alt="">
@@ -278,97 +277,35 @@
     <div class="container">
         <div class="row mx-lg-5">
             <div class="col-lg-6 col-md-12 mt-1 px-4">
-                <h2 class="heading-2 font-30">FAQ for our web app development services</h2>
+                <h2 class="section-title ">FAQ for our web app development services</h2>
                 <p class="sub-para font-16">Before you decide to build, scale or migrate your web app with Brainhub.</p>
             </div>
-            <div class="col-lg-6 col-md-12 px-0 px-md-3">
-                <div class="accordion ot-accordions faqAccord cursor-pointer" id="accordionExample">
-                    <div class="card-header  acc-toggle" (click)="toggleAccordient($event)" id="heading0">
-                        <div class="d-flex align-items-center text-decoration-none">
-                            <i class="fa-solid fa-chevron-right mx-2"></i>
-                            <span class="tab-title heading-3 font-20">Who should use web development services?</span>
-                        </div>
+            <div class="col-lg-6">
+              <div class="accordion" id="accordionExample">
+                <ng-container *ngFor="let item of accordian">
+                  <div class="accordion-item ">
+                    <h2 class="accordion-header" id="headingOne" (click)="toggleAccordient($event)">
+                      <button class="accordion-button collapsed " type="button" >
+                       {{item.name}}
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        {{item.des}}
+                      </div>
                     </div>
-                    <div class="card-body acc-content p-lg-0">
-                        <p class="sub-para font-16">Any fast-growing tech business that wants to build static sites,
-                            dynamic and
-                            single page websites, online e-commerce stores, portal web apps, animated web apps, web apps
-                            with a content management system, and progressive web applications (PWAs).</p>
-                    </div>
+                  </div>
+                </ng-container>
 
-                </div>
-                <div class="accordion ot-accordions faqAccord cursor-pointer" id="accordionExample">
-                    <div class="card-header  acc-toggle" (click)="toggleAccordient($event)" id="heading0">
-                        <div class="d-flex align-items-center text-decoration-none">
-                            <i class="fa-solid fa-chevron-right mx-2"></i>
-                            <span class="tab-title heading-3 font-20">Industries we serve</span>
-                        </div>
-                    </div>
-                    <div class="card-body acc-content p-lg-0">
-                        <p class="sub-para font-16">We have the biggest experience working with fintech, martech,
-                            gamedev,
-                            edtech and IoT companies, but we’re open to exploring new industries.</p>
-                    </div>
-
-                </div>
-                <div class="accordion ot-accordions faqAccord cursor-pointer" id="accordionExample">
-                    <div class="card-header  acc-toggle" (click)="toggleAccordient($event)" id="heading0">
-                        <div class="d-flex align-items-center text-decoration-none">
-                            <i class="fa-solid fa-chevron-right mx-2"></i>
-                            <span class="tab-title heading-3 font-20">What does a typical team look like?</span>
-                        </div>
-                    </div>
-                    <div class="card-body acc-content p-lg-0">
-                        <p class="sub-para font-16">The setup depends on your product maturity and needs but it can
-                            include
-                            experienced frontend and backend developers, QA engineers, Software Architects, UI/UX
-                            Designers, Scrum Masters, Business Analysts and DevOps engineers.</p>
-                    </div>
-
-                </div>
-                <div class="accordion ot-accordions faqAccord cursor-pointer" id="accordionExample">
-                    <div class="card-header  acc-toggle" (click)="toggleAccordient($event)" id="heading0">
-                        <div class="d-flex align-items-center text-decoration-none">
-                            <i class="fa-solid fa-chevron-right mx-2"></i>
-                            <span class="tab-title heading-3 font-20">What is the process?</span>
-                        </div>
-                    </div>
-                    <div class="card-body acc-content p-lg-0">
-                        <p class="sub-para font-16">Strategy: We make sure the product is feasible and create a
-                            prioritized
-                            roadmap of outcome-based goals that contribute to a product vision.</p>
-                        <p class="sub-para font-16">Discovery: We work together as one team to find the best ideas to
-                            reach the
-                            desired goals. Creating innovative web apps can be a very complex mission.</p>
-                        <p class="sub-para font-16">Delivery: First, we design and compose requirements for developers.
-                            Then we
-                            design the system and build the most critical business features. Finally, we do more tests
-                            to be sure that the product is as perfect as possible.</p>
-                    </div>
-
-                </div>
-                <div class="accordion ot-accordions faqAccord cursor-pointer" id="accordionExample">
-                    <div class="card-header  acc-toggle" (click)="toggleAccordient($event)" id="heading0">
-                        <div class="d-flex align-items-center text-decoration-none">
-                            <i class="fa-solid fa-chevron-right mx-2"></i>
-                            <span class="tab-title heading-3 font-20">How much it costs</span>
-                        </div>
-                    </div>
-                    <div class="card-body acc-content p-lg-0">
-                        <p class="sub-para font-16">We have worked on web app development projects with budgets that
-                            range from
-                            $40k to $1.2m. It’s very much dependent on the scope and duration of our involvement.
-                            Schedule a quick call with our Business Development Manager to get a tailored estimate.</p>
-                    </div>
-                </div>
+              </div>
             </div>
+
         </div>
     </div>
 </div>
 <div class="d-flex flex-column align-items-center get-started section-bottom-inner-space heading-2">
     <div class="container d-flex flex-column align-items-center justify-content-center">
-        <h1 class="text-center mb-4">Ready to Get Started?</h1>
+        <h1 class="section-title">Ready to Get Started?</h1>
         <button class="btn btn-primary py-3">Let's Connect</button>
     </div>
 </div>
-<app-footer></app-footer>

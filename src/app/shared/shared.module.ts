@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-
-
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -15,13 +13,15 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   ],
   imports: [
     CommonModule,
-    CarouselModule
+    CarouselModule,
+    RouterModule
   ],
   exports:[
     MenuBarComponent,
     FooterComponent,
     CarouselModule,
-    CommonModule
+    CommonModule,
+
   ]
 })
 export class SharedModule { }

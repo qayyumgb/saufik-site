@@ -1,10 +1,10 @@
 <header>
-  <div id="sticky-header" class="header_nav_manu d-lg-block d-none">
+  <div id="sticky-header" class="header_nav_manu d-lg-block d-none" [ngClass]="househover?'hoverMouse':''">
     <div class="container px-0">
       <div class="d-flex align-items-center">
         <div>
           <div class="logo">
-            <a class="logo_img" href="index.html" title="techno">
+            <a class="logo_img" routerLink="/" title="techno">
               <img src="assets/images/saufik-logo-black.png" alt="" />
             </a>
           </div>
@@ -12,289 +12,49 @@
         <div>
           <nav class="header-menu text-center px-5">
             <ul class="nav_scroll mb-0">
-              <li><a class="cursor-pointer" (click)="NavigateToSoftwareDev()">Services <span><i class="fas fa-angle-down"></i></span></a>
-                <ul class="sub-menu">
-                  <div class="row w-100">
-                    <div class="col-lg-4 grey-bg-sapce">
-                      <div class="col-megamenu">
-                        <h4 class="mb-3 title">Services</h4>
-                        <div class="media-img">
-                          <img src="../assets/images/services-nav.jpg" alt="" class="img-fluid mb-3 w-100">
-                          <h5>
-                            Unleashing the power of Dynamics 365: Transforming mundane tasks into intelligent
-                            solutions
-                          </h5>
-                          <a href="/blogs/unleashing-power-dynamics-365-transforming-mundane-tasks-intelligent-solutions"
-                            class="readmore-btn">
-                            Learn More<span><i class="fa-solid fa-arrow-right mx-1"></i></span>
-                          </a>
+              <ng-container *ngFor="let nav of navItems">
+                <li (mouseover)="submenumousehover(true)" (mouseleave)="submenumousehover(false)"><a
+                  class="pointer py-3">{{nav.linkName}} <span><i class="fas fa-angle-down"></i></span></a>
+                  <ul class="sub-menu w-100 p-0 overflow-hidden">
+                    <div class="submenu-grid " (mouseover)="submenumousehover(true)"
+                      (mouseleave)="submenumousehover(false)">
+
+                      <div class="row m-0">
+                        <div class="col-lg-3 bg-light">
+                          <div class="p-3 d-flex flex-column justify-content-between h-100  ">
+                            <h2 class="fw-7" [innerHTML]="nav.submenu.tagline">
+
+                            </h2>
+                            <p class="fw-6 pointer hover-move-arrow">{{nav.submenu.tabBtntext | uppercase}} <span
+                                class="fa fa-arrow-right"></span></p>
+                          </div>
+                        </div>
+                        <div class="col-lg-9 p-3">
+                          <div class="col-megamenu">
+                            <h4 class="mb-0 title">{{nav.submenu.heading}}</h4>
+
+                          </div>
+                          <div class="submenu-grid-for-Desktop">
+                            <ng-container *ngFor="let a of nav.submenu.sublink">
+                            <div class="grid-item d-flex gap-3 pointer" [routerLink]="a.link">
+                              <ng-container *ngIf="a.icon">
+                                <span class="fs-5 sub-nav-icon mt-2" [ngClass]="a.icon"></span>
+                              </ng-container>
+                              <div>
+                                <h5 class="grid-title fw-7 fs-6">{{a.name}}</h5>
+                                <p>Plan, organize, and collaborate on any project with task management that can be
+                                  customized for every need.</p>
+                              </div>
+                            </div>
+                          </ng-container>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-8 white-bg-sapce">
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <ul class="list-unstyled">
-                            <li class="sub-menu-li">
-                              <a href="">Digital</a>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/digital-commerce">Digital Commerce</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+                  </ul>
+                </li>
+              </ng-container>
 
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/business-applications">Business Applications</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                          </ul>
-                          <ul class="list-unstyled mb-3 py-0">
-                            <li class="sub-menu-li">
-                              <a href="">Digital & AI</a>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/digital-commerce">Digital Commerce</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/business-applications">Business Applications</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/business-applications">Business Applications</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                          </ul>
-                          <ul class="list-unstyled mb-3 py-0">
-                            <li class="sub-menu-li">
-                              <a href="">Cloud</a>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/digital-commerce">Digital Commerce</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/business-applications">Business Applications</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/business-applications">Business Applications</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                          </ul>
-                        </div>
-
-                        <div class="col-lg-6">
-                          <ul class="list-unstyled">
-                            <li class="sub-menu-li">
-                              <a href="">Digital</a>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/digital-commerce">Digital Commerce</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/business-applications">Business Applications</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                          </ul>
-                          <ul class="list-unstyled mb-3 py-0">
-                            <li class="sub-menu-li">
-                              <a href="">Digital & AI</a>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/digital-commerce">Digital Commerce</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/business-applications">Business Applications</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/business-applications">Business Applications</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </ul>
-              </li>
-              <li><a href="#home">Company <span><i class="fas fa-angle-down"></i></span></a>
-                <ul class="sub-menu w-100">
-                  <div class="row w-100">
-                    <div class="col-lg-8 white-bg-sapce">
-                      <div class="row">
-                        <div class="col-lg-6 d-flex justify-content-center">
-                          <ul class="list-unstyled">
-                            <li class="sub-menu-li">
-                              <a href="">Who we are</a>
-                            </li>
-                            <li class="sub-menu-li">
-                              <a href="">Our Accomplishments</a>
-                            </li>
-                            <li class="sub-menu-li">
-                              <a href="">Our Leadership</a>
-                            </li>
-                            <li class="sub-menu-li">
-                              <a href="">Our Global Presence</a>
-                            </li>
-                          </ul>
-                        </div>
-
-                        <div class="col-lg-6 d-flex justify-content-center">
-                          <ul class="list-unstyled">
-                            <li class="sub-menu-li">
-                              <a href="">Alliances</a>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/digital-commerce">Digital Commerce</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/business-applications">Business Applications</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/business-applications">IBM</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                          </ul>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </ul>
-              </li>
-
-              <li><a href="#about">Insights <span><i class="fas fa-angle-down"></i></span></a>
-                <ul class="sub-menu">
-                  <div class="row w-100">
-                    <div class="col-lg-4 grey-bg-sapce">
-                      <div class="col-megamenu">
-                        <h4 class="mb-3 title">Services</h4>
-                        <div class="media-img">
-                          <img src="../assets/images/services-nav.jpg" alt="" class="img-fluid mb-3 w-100">
-                          <h5>
-                            Unleashing the power of Dynamics 365: Transforming mundane tasks into intelligent
-                            solutions
-                          </h5>
-                          <a href="/blogs/unleashing-power-dynamics-365-transforming-mundane-tasks-intelligent-solutions"
-                            class="readmore-btn">
-                            Learn More<span><i class="fa-solid fa-arrow-right mx-1"></i></span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-8 white-bg-sapce">
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <ul class="list-unstyled">
-                            <li class="sub-menu-li">
-                              <a href="">Digital Case studies</a>
-                            </li>
-                            <li class="sub-menu-li">
-                              <a href="">Newsroom</a>
-                            </li>
-                            <li class="sub-menu-li">
-                              <a href="">Blogs</a>
-                            </li>
-                          </ul>
-
-                        </div>
-
-
-                      </div>
-                    </div>
-                  </div>
-                </ul>
-              </li>
-              <li><a href="#Company">Careers <span><i class="fas fa-angle-down"></i></span></a>
-                <ul class="sub-menu">
-                  <div class="row w-100">
-                    <div class="col-lg-4 grey-bg-sapce">
-                      <div class="col-megamenu">
-                        <h4 class="mb-3 title">Careers</h4>
-                        <div class="media-img">
-                          <img src="../assets/images/services-nav.jpg" alt="" class="img-fluid mb-3 w-100">
-                          <h5>
-                            Unleashing the power of Dynamics 365: Transforming mundane tasks into intelligent
-                            solutions
-                          </h5>
-                          <a href="/blogs/unleashing-power-dynamics-365-transforming-mundane-tasks-intelligent-solutions"
-                            class="readmore-btn">
-                            Learn More<span><i class="fa-solid fa-arrow-right mx-1"></i></span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-8 white-bg-sapce">
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <ul class="list-unstyled">
-                            <li class="sub-menu-li">
-                              <a>Career</a>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a class="cursor-pointer" (click)="NavigateToCareers()" >Career Opportunities</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                            </li>
-                            <li class="sub-list d-flex align-items-center">
-                              <a href="/expertise/digital-commerce">Life at Saufik</a>
-                              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                            </li>
-                          </ul>
-
-
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-                </ul>
-              </li>
             </ul>
 
 
@@ -311,7 +71,7 @@
     <div class="">
       <div class="d-flex align-items-center w-100 justify-content-between  mobile-nav">
         <div class="logo">
-          <a class="logo_img" href="index.html" title="techno">
+          <a class="logo_img" routerLink="/" title="techno">
             <img src="assets/images/saufik-logo-black.png" alt="" />
           </a>
         </div>
@@ -342,275 +102,278 @@
                         <ul class="list-unstyled">
                           <li class="sub-menu-li">
                             <a href="">Digital</a>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/digital-commerce">Digital Commerce</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+                            <div class="card-details">
+                              <div class="sub-list d-flex align-items-center">
+                                <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
+                                <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+                              </div>
+                              <div class="sub-list d-flex align-items-center">
+                                <a href="/expertise/digital-commerce">Digital Commerce</a>
+                                <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
 
-                          </li>
+                              </div>
                           <li class="sub-list d-flex align-items-center">
                             <a href="/expertise/business-applications">Business Applications</a>
                             <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
 
                           </li>
-                        </ul>
-                        <ul class="list-unstyled mb-3 py-0">
-                          <li class="sub-menu-li">
-                            <a href="">Digital & AI</a>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/digital-commerce">Digital Commerce</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/business-applications">Business Applications</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/business-applications">Business Applications</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                        </ul>
-                        <ul class="list-unstyled mb-3 py-0">
-                          <li class="sub-menu-li">
-                            <a href="">Cloud</a>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/digital-commerce">Digital Commerce</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/business-applications">Business Applications</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/business-applications">Business Applications</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                        </ul>
                       </div>
-
-                      <div class="col-lg-6">
-                        <ul class="list-unstyled">
-                          <li class="sub-menu-li">
-                            <a href="">Digital</a>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/digital-commerce">Digital Commerce</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/business-applications">Business Applications</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                        </ul>
-                        <ul class="list-unstyled mb-3 py-0">
-                          <li class="sub-menu-li">
-                            <a href="">Digital & AI</a>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/digital-commerce">Digital Commerce</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/business-applications">Business Applications</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/business-applications">Business Applications</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </ul>
-            </li>
-            <li><a href="#home">Company <span><i class="fas fa-angle-down"></i></span></a>
-              <ul class="sub-menu w-100">
-                <div class="row w-100">
-                  <div class="col-lg-8 white-bg-sapce">
-                    <div class="row">
-                      <div class="col-lg-6 d-flex justify-content-center">
-                        <ul class="list-unstyled">
-                          <li class="sub-menu-li">
-                            <a href="">Who we are</a>
-                          </li>
-                          <li class="sub-menu-li">
-                            <a href="">Our Accomplishments</a>
-                          </li>
-                          <li class="sub-menu-li">
-                            <a href="">Our Leadership</a>
-                          </li>
-                          <li class="sub-menu-li">
-                            <a href="">Our Global Presence</a>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="col-lg-6 d-flex justify-content-center">
-                        <ul class="list-unstyled">
-                          <li class="sub-menu-li">
-                            <a href="">Alliances</a>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/digital-commerce">Digital Commerce</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/business-applications">Business Applications</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/business-applications">IBM</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-
-                          </li>
-                        </ul>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </ul>
             </li>
 
-            <li><a href="#about">Insights <span><i class="fas fa-angle-down"></i></span></a>
-              <ul class="sub-menu">
-                <div class="row w-100">
-                  <div class="col-lg-4 grey-bg-sapce">
-                    <div class="col-megamenu">
-                      <h4 class="mb-3 title">Services</h4>
-                      <div class="media-img">
-                        <img src="../assets/images/services-nav.jpg" alt="" class="img-fluid mb-3 w-100">
-                        <h5>
-                          Unleashing the power of Dynamics 365: Transforming mundane tasks into intelligent
-                          solutions
-                        </h5>
-                        <a href="/blogs/unleashing-power-dynamics-365-transforming-mundane-tasks-intelligent-solutions"
-                          class="readmore-btn">
-                          Learn More<span><i class="fa-solid fa-arrow-right mx-1"></i></span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-8 white-bg-sapce">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <ul class="list-unstyled">
-                          <li class="sub-menu-li">
-                            <a href="">Digital Case studies</a>
-                          </li>
-                          <li class="sub-menu-li">
-                            <a href="">Newsroom</a>
-                          </li>
-                          <li class="sub-menu-li">
-                            <a href="">Blogs</a>
-                          </li>
-                        </ul>
-
-                      </div>
-
-
-                    </div>
-                  </div>
-                </div>
-              </ul>
+          </ul>
+          <ul class="list-unstyled mb-3 py-0">
+            <li class="sub-menu-li">
+              <a href="">Digital & AI</a>
             </li>
-            <li><a href="#Company">Careers <span><i class="fas fa-angle-down"></i></span></a>
-              <ul class="sub-menu">
-                <div class="row w-100">
-                  <div class="col-lg-4 grey-bg-sapce">
-                    <div class="col-megamenu">
-                      <h4 class="mb-3 title">Careers</h4>
-                      <div class="media-img">
-                        <img src="../assets/images/services-nav.jpg" alt="" class="img-fluid mb-3 w-100">
-                        <h5>
-                          Unleashing the power of Dynamics 365: Transforming mundane tasks into intelligent
-                          solutions
-                        </h5>
-                        <a href="/blogs/unleashing-power-dynamics-365-transforming-mundane-tasks-intelligent-solutions"
-                          class="readmore-btn">
-                          Learn More<span><i class="fa-solid fa-arrow-right mx-1"></i></span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-8 white-bg-sapce">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <ul class="list-unstyled">
-                          <li class="sub-menu-li">
-                            <a href="">Career</a>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/services/digital-consulting-strategy">Career Opportunities</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
-                          </li>
-                          <li class="sub-list d-flex align-items-center">
-                            <a href="/expertise/digital-commerce">Life at Saufik</a>
-                            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+            <li class="sub-list d-flex align-items-center">
+              <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
+              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+            </li>
+            <li class="sub-list d-flex align-items-center">
+              <a href="/expertise/digital-commerce">Digital Commerce</a>
+              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
 
-                          </li>
-                        </ul>
+            </li>
+            <li class="sub-list d-flex align-items-center">
+              <a href="/expertise/business-applications">Business Applications</a>
+              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
 
+            </li>
+            <li class="sub-list d-flex align-items-center">
+              <a href="/expertise/business-applications">Business Applications</a>
+              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
 
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </ul>
             </li>
           </ul>
-        </nav>
-        <div>
-         <span class="humburger">
-          <span></span>
-          <span></span>
-          <span></span>
-         </span>
-        </div>
+          <ul class="list-unstyled mb-3 py-0">
+            <li class="sub-menu-li">
+              <a href="">Cloud</a>
+            </li>
+            <li class="sub-list d-flex align-items-center">
+              <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
+              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+            </li>
+            <li class="sub-list d-flex align-items-center">
+              <a href="/expertise/digital-commerce">Digital Commerce</a>
+              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+
+            </li>
+            <li class="sub-list d-flex align-items-center">
+              <a href="/expertise/business-applications">Business Applications</a>
+              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+
+            </li>
+            <li class="sub-list d-flex align-items-center">
+              <a href="/expertise/business-applications">Business Applications</a>
+              <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+
+            </li>
+          </ul>
+      </div>
+
+      <div class="col-lg-6">
+        <ul class="list-unstyled">
+          <li class="sub-menu-li">
+            <a href="">Digital</a>
+          </li>
+          <li class="sub-list d-flex align-items-center">
+            <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
+            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+          </li>
+          <li class="sub-list d-flex align-items-center">
+            <a href="/expertise/digital-commerce">Digital Commerce</a>
+            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+
+          </li>
+          <li class="sub-list d-flex align-items-center">
+            <a href="/expertise/business-applications">Business Applications</a>
+            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+
+          </li>
+        </ul>
+        <ul class="list-unstyled mb-3 py-0">
+          <li class="sub-menu-li">
+            <a href="">Digital & AI</a>
+          </li>
+          <li class="sub-list d-flex align-items-center">
+            <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
+            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+          </li>
+          <li class="sub-list d-flex align-items-center">
+            <a href="/expertise/digital-commerce">Digital Commerce</a>
+            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+
+          </li>
+          <li class="sub-list d-flex align-items-center">
+            <a href="/expertise/business-applications">Business Applications</a>
+            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+
+          </li>
+          <li class="sub-list d-flex align-items-center">
+            <a href="/expertise/business-applications">Business Applications</a>
+            <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+
+          </li>
+        </ul>
       </div>
     </div>
+  </div>
+  </div>
+  </ul>
+  </li>
+  <li><a href="#home">Company <span><i class="fas fa-angle-down"></i></span></a>
+    <ul class="sub-menu w-100">
+      <div class="row w-100">
+        <div class="col-lg-8 white-bg-sapce">
+          <div class="row">
+            <div class="col-lg-6 d-flex justify-content-center">
+              <ul class="list-unstyled">
+                <li class="sub-menu-li">
+                  <a href="">Who we are</a>
+                </li>
+                <li class="sub-menu-li">
+                  <a href="">Our Accomplishments</a>
+                </li>
+                <li class="sub-menu-li">
+                  <a href="">Our Leadership</a>
+                </li>
+                <li class="sub-menu-li">
+                  <a href="">Our Global Presence</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-6 d-flex justify-content-center">
+              <ul class="list-unstyled">
+                <li class="sub-menu-li">
+                  <a href="">Alliances</a>
+                </li>
+                <li class="sub-list d-flex align-items-center">
+                  <a href="/services/digital-consulting-strategy">Digital Consulting &amp; Strategy</a>
+                  <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+                </li>
+                <li class="sub-list d-flex align-items-center">
+                  <a href="/expertise/digital-commerce">Digital Commerce</a>
+                  <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+
+                </li>
+                <li class="sub-list d-flex align-items-center">
+                  <a href="/expertise/business-applications">Business Applications</a>
+                  <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+
+                </li>
+                <li class="sub-list d-flex align-items-center">
+                  <a href="/expertise/business-applications">IBM</a>
+                  <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </li>
+
+  <li><a href="#about">Insights <span><i class="fas fa-angle-down"></i></span></a>
+    <ul class="sub-menu">
+      <div class="row w-100">
+        <div class="col-lg-4 grey-bg-sapce">
+          <div class="col-megamenu">
+            <h4 class="mb-3 title">Services</h4>
+            <div class="media-img">
+              <img src="../assets/images/services-nav.jpg" alt="" class="img-fluid mb-3 w-100">
+              <h5>
+                Unleashing the power of Dynamics 365: Transforming mundane tasks into intelligent
+                solutions
+              </h5>
+              <a href="/blogs/unleashing-power-dynamics-365-transforming-mundane-tasks-intelligent-solutions"
+                class="readmore-btn">
+                Learn More<span><i class="fa-solid fa-arrow-right mx-1"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 white-bg-sapce">
+          <div class="row">
+            <div class="col-lg-6">
+              <ul class="list-unstyled">
+                <li class="sub-menu-li">
+                  <a href="">Digital Case studies</a>
+                </li>
+                <li class="sub-menu-li">
+                  <a href="">Newsroom</a>
+                </li>
+                <li class="sub-menu-li">
+                  <a href="">Blogs</a>
+                </li>
+              </ul>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </ul>
+  </li>
+  <li><a href="#Company">Careers <span><i class="fas fa-angle-down"></i></span></a>
+    <ul class="sub-menu">
+      <div class="row w-100">
+        <div class="col-lg-4 grey-bg-sapce">
+          <div class="col-megamenu">
+            <h4 class="mb-3 title">Careers</h4>
+            <div class="media-img">
+              <img src="../assets/images/services-nav.jpg" alt="" class="img-fluid mb-3 w-100">
+              <h5>
+                Unleashing the power of Dynamics 365: Transforming mundane tasks into intelligent
+                solutions
+              </h5>
+              <a href="/blogs/unleashing-power-dynamics-365-transforming-mundane-tasks-intelligent-solutions"
+                class="readmore-btn">
+                Learn More<span><i class="fa-solid fa-arrow-right mx-1"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 white-bg-sapce">
+          <div class="row">
+            <div class="col-lg-6">
+              <ul class="list-unstyled">
+                <li class="sub-menu-li">
+                  <a href="">Career</a>
+                </li>
+                <li class="sub-list d-flex align-items-center">
+                  <a href="/services/digital-consulting-strategy">Career Opportunities</a>
+                  <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+                </li>
+                <li class="sub-list d-flex align-items-center">
+                  <a href="/expertise/digital-commerce">Life at Saufik</a>
+                  <span><i class="fa-solid fa-arrow-right mx-2"></i></span>
+
+                </li>
+              </ul>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </ul>
+  </li>
+  </ul>
+  </nav>
+  <div>
+    <span class="humburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </div>
+  </div>
+  </div>
   </div>
 
 </header>
