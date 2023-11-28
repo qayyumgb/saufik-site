@@ -17,4 +17,7 @@ export class MenuBarComponent {
   NavigateToCareers(){
     this.route_service.navigateByUrl('careers-opportunities');
   }
+  NavigateToSoftwareDev(){
+    this.route_service.navigateByUrl('software-development-services');
+  }
 }

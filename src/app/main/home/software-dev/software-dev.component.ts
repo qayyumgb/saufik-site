@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class SoftwareDevComponent {
 
+
+  toggleAccordient(e: any) {
+    
+    let allFaq: any = document.querySelectorAll(".faqAccord")
+    for (let item of allFaq) {
+      if (item.firstChild != e.currentTarget) {
+        item.classList.remove("show")
+      }
+    }
+    if (e.currentTarget.parentElement.classList.contains("show")) {
+      e.currentTarget.parentElement.classList.remove("show")
+    } else {
+      e.currentTarget.parentElement.classList.add("show")
+    }
+  }
 }

@@ -14,7 +14,6 @@ const routes: Routes = [
     
 
   },
-   {path:'software-development-services', component : SoftwareDevComponent},
 
  
 ];

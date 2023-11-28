@@ -15,7 +15,4 @@ export class SaufikServicesComponent {
 
   }
  
-  NavigateToSoftwareDev(){
-    this.route_service.navigateByUrl('software-development-services');
-  }
 }
