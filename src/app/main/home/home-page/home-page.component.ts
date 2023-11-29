@@ -10,7 +10,7 @@ export class HomePageComponent {
   testtemonial:number[] =[1,2,3]
   customOptions: OwlOptions = {
     center: true,
-    items:5,
+    items:6,
     loop:true,
     margin:0,
     nav:false,
@@ -32,6 +32,9 @@ export class HomePageComponent {
         },
         1200:{
             items:5
+        },
+        1320:{
+            items:6
         }
     }
   }

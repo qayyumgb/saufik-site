@@ -179,8 +179,6 @@ font-size: 17px;
         // box-shadow: 0 0 0 6px white;
       }
 
-      &.image-1 {}
-
       &.image-2 {
         right: 0;
         display: flex;
@@ -516,6 +514,13 @@ svg.svg2 {
 {
   img{
     width: 80px;
+  }
+}
+:host ::ng-deep{
+  .technology-tools{
+    .owl-stage-outer{
+      overflow: visible !important;
+    }
   }
 }
 
