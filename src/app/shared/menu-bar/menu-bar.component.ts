@@ -20,39 +20,39 @@ export class MenuBarComponent {
             name:"Web Developemt",
             icon:"fa fa-laptop",
             text:"",
-            link:"/service"
+            link:"/service/web-developemnt"
           },
           {
             name:"Mobile App",
             icon:"fa fa-mobile",
             text:"",
-            link:"/careers/opportunities"
+            link:"/service/mobile-app"
           },
 
           {
             name:"UIUX",
             icon:"fa fa-swatchbook",
             text:"",
-            link:"/careers/opportunities"
+            link:"/service/uiux"
           },
 
           {
             name:"Quality Assurance",
             icon:"fa fa-scale-balanced",
             text:"",
-            link:"/careers/opportunities"
+            link:"/service/QualityAssurance"
           },
           {
             name:"Cloud Engineering & DevOps",
             icon:"fa fa-cloud",
             text:"",
-            link:"/careers/opportunities"
+            link:"/service/cloud-engineering"
           },
           {
             name:"Digital Marketing",
             icon:"fa  fa-money-bill-trend-up",
             text:"",
-            link:"/careers/opportunities"
+            link:"/service/digital-marketing"
           },
 
         ]
@@ -149,13 +149,13 @@ export class MenuBarComponent {
             name:"Career Opportunities",
             icon:"fa fa-building",
             text:"",
-            link:"/careers/opportunities"
+            link:"/careers"
           },
           {
             name:"Life At Saufik",
             icon:"fa fa-clipboard-list",
             text:"",
-            link:"/careers/opportunities"
+            link:"/careers"
           },
 
 
