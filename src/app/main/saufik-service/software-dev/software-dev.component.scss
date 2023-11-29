@@ -116,34 +116,36 @@
   }
 }
 
-
-
-
-
 .featured-industries {
-  // padding: 60px 0;
-
   .feature-btn {
     display: flex;
     align-items: center;
-    background: #f5f6f8;
-    background: #F7FBFF;
-    margin-right: 30px;
-    padding: 20px 35px;
-    border-radius: 46px;
-    width: 350px;
-    margin-bottom: 30px;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 25px;
+    border: 1px solid #cfcfeb;
+    font-weight: 700;
+    padding: 25px;
+    max-width: 175px;
+    max-height: 112px;
 
     img {
-      margin-right: 12px;
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
     }
 
     span {
-      font-size: 23px;
-      font-weight: 500;
+      font-size: 16px;
+      font-weight: 600;
       line-height: 1.35;
       letter-spacing: 0.29px;
       color: #000;
+    }
+    &:hover{
+      transform: translateY(1px);
+      box-shadow: 0 0 13px 0 rgb(47 157 226 / 50%);
     }
   }
 }

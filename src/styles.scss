@@ -274,3 +274,21 @@ body {
   }
 
 }
+.btn-custom{
+  font-weight: 600;
+  box-shadow: 0 0 13px 0px rgba(101, 51, 252, 0.5);
+  transition: 0.25s cubic-bezier(0.895,0.03,0.685,0.22);
+  font-size:16px !important;
+  &:hover{
+    transform: translateY(1.2px);
+  }
+}
+.btn-rounded-sm{
+  background: #1683ea;
+  color: white;
+  border: 1px solid #1683ea;
+  padding: 0.5rem 1.25rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  border-radius: 50px;
+}

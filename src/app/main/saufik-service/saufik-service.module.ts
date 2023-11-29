@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SaufikServiceRoutingModule } from './saufik-service-routing.module';
 import { SoftwareDevComponent } from './software-dev/software-dev.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { SoftwareDevComponent } from './software-dev/software-dev.component';
   ],
   imports: [
     CommonModule,
-    SaufikServiceRoutingModule
+    SaufikServiceRoutingModule,
+    CarouselModule,
   ]
 })
 export class SaufikServiceModule { }
