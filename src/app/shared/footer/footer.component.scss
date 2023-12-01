@@ -4,8 +4,7 @@
  &::before{
   content: '';
   background-image:url("../../../assets/images/footerimg.png") !important;
-  background-repeat: no-repeat I !important;
-  background-repeat-x: no-repeat !important;
+  background-repeat: no-repeat !important;
   background-position: left;
   position: absolute;
   bottom: 0;
@@ -14,7 +13,7 @@
   height: 100%;
   opacity: .1;
  }
-    background: #182c50;
+    background: linear-gradient(90deg,#071c4d,#002d97)!important;
     a {
         text-decoration: none;
     }

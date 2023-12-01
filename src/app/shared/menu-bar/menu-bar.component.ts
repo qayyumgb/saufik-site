@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 // import { Router } from '@angular/router';
 
 @Component({
@@ -20,39 +21,39 @@ export class MenuBarComponent {
             name:"Web Developemt",
             icon:"fa fa-laptop",
             text:"",
-            link:"/service/web-developemnt"
+            link:"web-developemnt"
           },
           {
             name:"Mobile App",
             icon:"fa fa-mobile",
             text:"",
-            link:"/service/mobile-app"
+            link:"mobile-app"
           },
 
           {
             name:"UIUX",
             icon:"fa fa-swatchbook",
             text:"",
-            link:"/service/uiux"
+            link:"uiux"
           },
 
           {
             name:"Quality Assurance",
             icon:"fa fa-scale-balanced",
             text:"",
-            link:"/service/QualityAssurance"
+            link:"QualityAssurance"
           },
           {
             name:"Cloud Engineering & DevOps",
             icon:"fa fa-cloud",
             text:"",
-            link:"/service/cloud-engineering"
+            link:"cloud-engineering"
           },
           {
             name:"Digital Marketing",
             icon:"fa  fa-money-bill-trend-up",
             text:"",
-            link:"/service/digital-marketing"
+            link:"digital-marketing"
           },
 
         ]
@@ -165,12 +166,16 @@ export class MenuBarComponent {
       }
     }
   ]
-  constructor(){
+  constructor(private router: Router,){
 
   }
 
   ngOnint(){
 
+  }
+
+  changeRoute(getRoute:any){
+    this.router.navigate([`/service/${getRoute}`])
   }
 
   househover:boolean = false;

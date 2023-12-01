@@ -36,7 +36,7 @@
                           </div>
                           <div class="submenu-grid-for-Desktop">
                             <ng-container *ngFor="let a of nav.submenu.sublink">
-                            <div class="grid-item d-flex gap-3 pointer" [routerLink]="a.link">
+                            <div class="grid-item d-flex gap-3 pointer" (click)="changeRoute(a.link)">
                               <ng-container *ngIf="a.icon">
                                 <span class="fs-5 sub-nav-icon mt-2" [ngClass]="a.icon"></span>
                               </ng-container>

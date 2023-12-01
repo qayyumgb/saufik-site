@@ -13,7 +13,7 @@ const routes: Routes = [
       { path: 'careers', loadChildren: () => import('./careers/careers.module').then(m => m.CareersModule) },
       { path: 'company', loadChildren: () => import('./company/company.module').then(m => m.CompanyModule) },
       { path: 'insights', loadChildren: () => import('./insights/insights.module').then(m => m.InsightsModule) },
-      { path: 'service/:techName', loadChildren: () => import('./saufik-service/saufik-service.module').then(m => m.SaufikServiceModule) },
+      { path: 'service/:id', loadChildren: () => import('./saufik-service/saufik-service.module').then(m => m.SaufikServiceModule) },
       { path: '**', redirectTo: '/' }
     ]
 

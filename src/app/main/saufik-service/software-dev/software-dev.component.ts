@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ServiceDto } from 'src/app/constant/models/serviceDto';
 import { servicesData } from 'src/app/constant/static/servicesData';
@@ -11,27 +11,36 @@ import { JsonDataService } from 'src/app/services/json-data.service';
   styleUrls: ['./software-dev.component.scss']
 })
 export class SoftwareDevComponent implements OnInit {
-  techname: string | null = '';
-  techEndData: ServiceDto | null = null
-  paramList: string[] = ["web-developemnt", "mobile-app", "uiux", "QualityAssurance", "cloud-engineering", "digital-marketing"]
+  id:any;
+  serviceDetailData:any
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private dataService:JsonDataService) {
-    this.activatedRoute.paramMap.subscribe(params => {
-      if (params.get('techName')) {
-        this.techname = params.get('techName');
-        this.paramList.some(x => x == this.techname)
-          ? this.techEndData = servicesData.filter(x => x.id == this.techname)[0]
-          : this.router.navigateByUrl("");
-
+    debugger
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // Handle route change here
+        this.loadComponentData();
       }
     });
+    
   }
 
-
-  ngOnInit(): void {
-    this.dataService.GetAllServiceJson().subscribe((item:any) => {
-      console.log('services detail',item)
-    })
+  async ngOnInit() {debugger
+    
+    console.log('param id',this.id)
+    await this.loadComponentData();
+    // console.log('services detail',this.serviceDetailData)
+    
   }
+
+async loadComponentData(){
+  this.id = this.activatedRoute.snapshot.paramMap.get('id');
+  this.dataService.GetAllServiceJson().subscribe((item:any) => {
+    this.serviceDetailData = item.filter((services:ServiceDto) => services.id === this.id)[0]
+    
+  })
+ 
+}
+
 
   faqId:number = 0
   toggleAccordient(getId: any) {
@@ -42,7 +51,7 @@ export class SoftwareDevComponent implements OnInit {
     center: true,
     items:6,
     loop:true,
-    margin:0,
+    margin:20,
     nav:false,
     dots:false,
     autoplay: true,
@@ -61,7 +70,10 @@ export class SoftwareDevComponent implements OnInit {
             items:4
         },
         1200:{
-            items:5
+            items:6
+        },
+        1320:{
+            items:6
         }
     }
   }

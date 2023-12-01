@@ -7,7 +7,7 @@ import { ServiceDto } from '../constant/models/serviceDto';
   providedIn: 'root'
 })
 export class JsonDataService {
-   jsonUrl = '../constant/json/serviceJson.json';
+   jsonUrl = '';
 
   constructor(private http:HttpClient) {
 
@@ -16,6 +16,6 @@ export class JsonDataService {
 
 
   GetAllServiceJson():Observable<any>{
-    return this.http.get<any>('../constant/json/serviceJson.json')
+    return this.http.get<any>('assets/json-files/services.json')
   }
 }

@@ -1,10 +1,10 @@
-<ng-container *ngIf="techEndData" >
+<ng-container *ngIf="serviceDetailData" >
   <div class="dev-background position-relative">
     <div class="background-overlay"></div>
     <div class="container banner-text d-flex align-items-center">
         <div class="mt-5">
-            <h1 class="font-30">{{techEndData.mainTitle }} Services</h1>
-            <p class="mb-2 font-16">{{techEndData.Technologies}}</p>
+            <h1 class="font-30">{{serviceDetailData.mainTitle }} Services</h1>
+            <p class="mb-2 font-16">{{serviceDetailData.Technologies}}</p>
             <p class="font-16">80+ delivered projects. ★4.9 / 5 .</p>
             <button class="btn btn-primary btn-custom py-3 bg-white text-primary font-14 text-uppercase">Let's
                 Start</button>
@@ -17,7 +17,7 @@
         <div class="d-flex align-items-center py-4 mx-lg-5 flex-lg-nowrap flex-wrap">
             <p class="text-white text-nowrap mx-3">Trusted By:</p>
             <div class="d-flex justify-content-between w-100 flex-wrap">
-               <ng-container *ngFor="let item of techEndData?.trustedImages" >
+               <ng-container *ngFor="let item of serviceDetailData?.trustedImages" >
                 <img src="../../../../assets/images/{{item}}" alt="">
                </ng-container>
 
@@ -295,7 +295,7 @@
             </div>
             <div class="col-lg-6">
               <div class="accordion d-flex flex-column gap-2" >
-                <ng-container *ngFor="let item of techEndData?.faq;let i = index">
+                <ng-container *ngFor="let item of serviceDetailData?.faq;let i = index">
                   <div [ngClass]="faqId == i ?'show':''" class="accordion ot-accordions faqAccord cursor-pointer  " id="accordionExample">
                     <div class="card-header  acc-toggle " (click)="toggleAccordient(i)" id="heading0">
                         <div class="d-flex align-items-center text-decoration-none">

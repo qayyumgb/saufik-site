@@ -7,6 +7,6 @@ export interface ServiceDto {
   id: string,
   mainTitle: string
   Technologies: string
-  trustedImages: string[]
+  trustedImages: any[]
   faq:faq[]
 }
