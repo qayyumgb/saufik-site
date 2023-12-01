@@ -1,0 +1,110 @@
+.dev-background {
+    background-image: url(../../../../assets/images/career-banner.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    background-position: 100%;
+}
+
+.background-overlay,
+.blue-overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.background-overlay {
+    background: linear-gradient(90deg, rgba(1, 75, 245, 0.71), rgba(3, 63, 206, 0.90));
+}
+
+.banner-text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    h1 {
+        color: #fff;
+        font-size: 44px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 20px;
+        color: #fff;
+    }
+}
+.paragraph1{
+    font-size: 18px;
+    color: #180f3d;
+
+}
+.paragraph2{
+    font-size: 24px;
+}
+.history-values-wrapper{
+    row-gap: 4rem;
+    column-gap: 6rem;
+}
+.history-values-card-main{
+    width: 500px;
+}
+.history-values-card{
+    position: relative;
+    border-bottom-left-radius: 3.75rem;
+    border-top-right-radius: 3.75rem;
+    padding-right: 2rem;
+    padding-top: 1.75rem;
+    padding-left: 3rem;
+    padding-bottom: 6.5rem;   
+    .history-values-card-headline{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .history-values-card-left-icon{
+        position: absolute;
+        left: 0;
+        top: 95%;
+        transform: translate(-50%,-50%);
+    }
+    .history-values-card-right-icon{
+        position: absolute;
+        left: 95%;
+        top: 95%;
+        transform: translate(-50%,-50%)!important;
+    }
+    .history-values-card-icon{
+        path#Vector,.path {
+            fill: #f3f6fc;
+        }
+        path#Vector_2{
+            fill: #083dc8;
+    stroke: #083dc8;
+        }
+    }
+    img{
+        width: 100px;
+        height: 100px;
+    }
+}
+.reason-wrapper{
+    padding: 3rem 0;
+    border-radius: 30px;
+    margin-top: 70px !important;
+}
+.history-reason-block-text{
+    max-width: 320px;
+    width: 100%;
+    .history-reason-block-headline{
+        color: #ffc978;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    }
+}
+.team-heading{
+  h2{
+    font-size: 4rem;
+  }  
+}

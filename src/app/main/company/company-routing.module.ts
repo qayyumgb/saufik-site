@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { SaufikAccomplishmentsComponent } from './saufik-accomplishments/saufik-accomplishments.component';
 import { SaufikLeadershipComponent } from './saufik-leadership/saufik-leadership.component';
 import { GlobalPresenceComponent } from './global-presence/global-presence.component';
+import { WhoWeArePageComponent } from './who-we-are-page/who-we-are-page.component';
+
 
 const routes: Routes = [
   {
@@ -13,8 +15,13 @@ const routes: Routes = [
   },
   {
     path: "global-presence", component: GlobalPresenceComponent,
+  },
+  {
+    path:"who-we-are", component :WhoWeArePageComponent
   }
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

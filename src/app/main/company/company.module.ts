@@ -5,13 +5,16 @@ import { CompanyRoutingModule } from './company-routing.module';
 import { SaufikAccomplishmentsComponent } from './saufik-accomplishments/saufik-accomplishments.component';
 import { SaufikLeadershipComponent } from './saufik-leadership/saufik-leadership.component';
 import { GlobalPresenceComponent } from './global-presence/global-presence.component';
+import { WhoWeArePageComponent } from './who-we-are-page/who-we-are-page.component';
+
 
 
 @NgModule({
   declarations: [
     SaufikAccomplishmentsComponent,
     SaufikLeadershipComponent,
-    GlobalPresenceComponent
+    GlobalPresenceComponent,
+    WhoWeArePageComponent
   ],
   imports: [
     CommonModule,
