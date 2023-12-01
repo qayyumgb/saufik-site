@@ -7,6 +7,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./careers-opportunities.component.scss']
 })
 export class CareersOpportunitiesComponent {
+  WorkingEnviroment:any = [
+    {
+      icon:"fa-solid fa-house-laptop",
+      title:"Remote Working Facilities",
+      detail:"Credibly syndicate enterprise total linkage whereas cost effective innovate state of the art data without multifunctional. "
+    },
+    {
+      icon:"fa-regular fa-clock",
+      title:"Flexible Working Hours",
+      detail:"Credibly syndicate enterprise total linkage whereas cost effective innovate state of the art data without multifunctional. "
+
+    },
+    {
+      icon:"fa-solid fa-people-group",
+      title:"Friendly Skilled Team",
+      detail:"Credibly syndicate enterprise total linkage whereas cost effective innovate state of the art data without multifunctional. "
+
+    },
+    {
+      icon:"fa-solid fa-briefcase-medical",
+      title:"Medical Insurance Facilities",
+      detail:"Credibly syndicate enterprise total linkage whereas cost effective innovate state of the art data without multifunctional. "
+
+    },
+  ]
   constructor(private route_service: Router){
 
   }

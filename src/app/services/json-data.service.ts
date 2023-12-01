@@ -18,4 +18,12 @@ export class JsonDataService {
   GetAllServiceJson():Observable<any>{
     return this.http.get<any>('assets/json-files/services.json')
   }
+
+  GetAllMenuItems():Observable<any>{
+    return this.http.get<any>("assets/json-files/menu-item.json")
+  }
+
+  GetAllExperties():Observable<any>{
+    return this.http.get<any>("assets/json-files/saufikExperties.json")
+  }
 }

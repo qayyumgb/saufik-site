@@ -62,50 +62,19 @@
       </div>
     </div>
     <div class="row mt-4">
-      <div class="col-lg-6 col-md-12">
-        <div
-          class="single-feature-card d-flex mt-0 p-5 bg-white rounded-custom mb-lg-0 mb-md-4 mb-4 flex-wrap flex-lg-nowrap">
-          <i class="fa-solid fa-house-laptop"></i>
-          <div class="ms-4">
-            <h5 class="fw-5">Remote Working Facilities</h5>
-            <p class="mb-0 light-text">Credibly syndicate enterprise total linkage whereas cost effective
-              innovate
-              state of the art data without multifunctional. </p>
+      <ng-container *ngFor="let item of WorkingEnviroment">
+        <div class="col-lg-6 col-md-12">
+          <div
+            class="single-feature-card d-flex mt-0 p-5 bg-white rounded-custom mb-lg-0 mb-md-4 mb-4 flex-wrap flex-lg-nowrap">
+            <i [class]="item.icon"></i>
+            <div class="ms-4">
+              <h5 class="fw-5">{{item.title}}</h5>
+              <p class="mb-0 light-text">{{item.detail}}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-6 col-md-12">
-        <div class="single-feature-card d-flex mt-0 p-5 bg-white rounded-custom flex-wrap flex-lg-nowrap">
-          <i class="fa-regular fa-clock"></i>
-          <div class="ms-4 ">
-            <h5 class="fw-5">Flexible Working Hours</h5>
-            <p class="mb-0 light-text">Credibly syndicate enterprise total linkage whereas cost effective
-              innovate
-              state of the art data without multifunctional. </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-12 mt-4">
-        <div class="single-feature-card d-flex mt-0 p-5 bg-white rounded-custom flex-wrap flex-lg-nowrap">
-          <i class="fa-solid fa-people-group"></i>
-          <div class="ms-4 ">
-            <h5 class="fw-5">Friendly Skilled Team</h5>
-            <p class="mb-0 light-text">Credibly syndicate enterprise total linkage whereas cost effective
-              innovate state of the art data without multifunctional.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-12 mt-4">
-        <div class="single-feature-card d-flex mt-0 p-5 bg-white rounded-custom flex-wrap flex-lg-nowrap">
-          <i class="fa-solid fa-briefcase-medical"></i>
-          <div class="ms-4">
-            <h5 class="fw-5">Medical Insurance Facilities</h5>
-            <p class="mb-0 light-text">Credibly syndicate enterprise total linkage whereas cost effective
-              innovate
-              state of the art data without multifunctional. </p>
-          </div>
-        </div>
-      </div>
+      </ng-container>
+
     </div>
 
   </div>
