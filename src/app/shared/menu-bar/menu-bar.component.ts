@@ -21,39 +21,39 @@ export class MenuBarComponent {
             name:"Web Developemt",
             icon:"fa fa-laptop",
             text:"",
-            link:"web-developemnt"
+            link:"service//web-developemnt"
           },
           {
             name:"Mobile App",
             icon:"fa fa-mobile",
             text:"",
-            link:"mobile-app"
+            link:"service/mobile-app"
           },
 
           {
             name:"UIUX",
             icon:"fa fa-swatchbook",
             text:"",
-            link:"uiux"
+            link:"service/uiux"
           },
 
           {
             name:"Quality Assurance",
             icon:"fa fa-scale-balanced",
             text:"",
-            link:"QualityAssurance"
+            link:"service/QualityAssurance"
           },
           {
             name:"Cloud Engineering & DevOps",
             icon:"fa fa-cloud",
             text:"",
-            link:"cloud-engineering"
+            link:"service/cloud-engineering"
           },
           {
             name:"Digital Marketing",
             icon:"fa  fa-money-bill-trend-up",
             text:"",
-            link:"digital-marketing"
+            link:"service/digital-marketing"
           },
 
         ]
@@ -72,27 +72,27 @@ export class MenuBarComponent {
             name:"Who We Are",
             icon:"fa fa-building",
             text:"",
-            link:"/careers/opportunities"
+            link:"/company/opportunities"
           },
           {
             name:"Our Accomplishments",
             icon:"fa fa-clipboard-list",
             text:"",
-            link:"/careers/opportunities"
+            link:"/company/accomplishments"
           },
 
           {
             name:"Our Leadership",
             icon:"fa fa-people-group",
             text:"",
-            link:"/careers/opportunities"
+            link:"/company/leadership"
           },
 
           {
             name:"Our Global Presence",
             icon:"fa fa-globe",
             text:"",
-            link:"/careers/opportunities"
+            link:"/company/global-presence"
           },
 
         ]
@@ -175,7 +175,7 @@ export class MenuBarComponent {
   }
 
   changeRoute(getRoute:any){
-    this.router.navigate([`/service/${getRoute}`])
+    this.router.navigate([`${getRoute}`])
   }
 
   househover:boolean = false;
