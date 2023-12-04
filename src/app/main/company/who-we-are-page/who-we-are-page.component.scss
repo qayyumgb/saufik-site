@@ -17,7 +17,7 @@
 }
 
 .background-overlay {
-    background: linear-gradient(90deg, rgba(1, 75, 245, 0.71), rgba(3, 63, 206, 0.90));
+    background: linear-gradient(80deg, rgb(18 50 125 / 100%), rgba(3, 63, 206, 0.9));
 }
 .blue-overlay{
     background: linear-gradient(90deg, rgba(7, 28, 77, 0.7098039216), rgba(0, 45, 151, 0.5215686275)) !important;
@@ -69,6 +69,7 @@
     span{
         background: linear-gradient(94.88deg, #1583e9 5.12%, #0dcaf0 93.99%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     }
     }
@@ -170,6 +171,19 @@
 .bg-grey{
     background-color: #f3f6fc;
 }
+.card-container{
+    border-radius: 25px;
+    h5{
+        color: #1683ea;
+    }
+    .card-wrapper{
+        padding: 25px;
+    }
+    .card-wrapper-img{
+        max-width: 350px;
+    }
+}
+
 @media (max-width: $mobile) {
    .links-box-wrap,.list-box-inner{
     grid-template-columns: auto;

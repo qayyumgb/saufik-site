@@ -4,12 +4,14 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RouterModule } from '@angular/router';
+import { HeaderBannerComponent } from './header-banner/header-banner.component';
 
 
 @NgModule({
   declarations: [
     MenuBarComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderBannerComponent
   ],
   imports: [
     CommonModule,
@@ -20,6 +22,7 @@ import { RouterModule } from '@angular/router';
     MenuBarComponent,
     FooterComponent,
     CarouselModule,
+    HeaderBannerComponent,
     CommonModule,
 
   ]

@@ -1,0 +1,15 @@
+
+<ng-container *ngIf="headerdata">
+    <div class="dev-background position-relative">
+        <div class="background-overlay"></div>
+        <div class="container banner-text d-flex align-items-center">
+            <div class="mt-5">
+                <p class="text-label mb-3 text-warning">[{{headerdata.title}} ]</p>
+                <h1 class="font-30" [innerHtml]="headerdata.subTitle" ></h1>
+                <p>{{headerdata.tagline}}</p>
+    
+            </div>
+        </div>
+    </div>
+
+</ng-container>
