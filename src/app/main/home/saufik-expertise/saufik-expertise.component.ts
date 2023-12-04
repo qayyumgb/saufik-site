@@ -28,7 +28,7 @@ export class SaufikExpertiseComponent implements OnInit {
 
   }
 
-  expertiesDetail=[
+  expertiesDetail:any=[
     {
       name:"Automation",
       icon:"Automationicon-01.svg"
@@ -79,7 +79,7 @@ export class SaufikExpertiseComponent implements OnInit {
   resizeMehod(){
   this.deviceIs()
   }
-  deviceIs(){
+  deviceIs():void{
     window.innerWidth < 768 ? this.isMobile = true:this.isMobile = false;
   }
 }

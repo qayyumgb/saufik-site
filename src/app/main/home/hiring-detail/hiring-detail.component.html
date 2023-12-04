@@ -40,15 +40,18 @@
                       </div>
                     </div>
                     <div class="text-center">
-                      <h5 class="mt-3 emp-name mb-0">{{item.name}}</h5>
-                      <p class="emp-designation mb-0 fw-5">Lead Front-End-Developer</p>
-                      <p class="emp-experience mb-0 fw-500">6 Years +</p>
+                      <h5 class="mt-3 emp-name mb-0">{{item?.name}}</h5>
+                      <p class="emp-designation mb-0 fw-5">{{item?.title}}</p>
+                      <p class="emp-experience mb-0 fw-500">{{item?.yearsOfexperience}}</p>
                     </div>
                     <div class="skills-section">
                       <p class="my-2 top-skills fw-5 text-center">Skills</p>
                       <div class="skill-box d-flex flex-wrap">
-                        <span>Javascript</span><span>Angular</span><span>ReactJS</span><span>HTML
-                          5</span><span>Scss</span>
+                        <ng-container *ngIf="item?.technicalExperties">
+                          <ng-container *ngFor="let item of item.technicalExperties">
+                            <span>{{item.name}}</span>
+                          </ng-container>
+                        </ng-container>
                       </div>
                     </div>
                     <div
@@ -103,11 +106,8 @@
                     </button>
                   </h2>
                 </div>
-                <div id="collapse0" class="collapse display-text" [ngClass]="faqTog == i?'show d-block':''">
-                  <p>{{item.ans}} Use IT staff augmentation Services at MGA to gain access to our
-                    highly qualified, dedicated team. We can assist you in scaling up team sizing on
-                    demand with the right pool of talented developers at reasonable prices. Clients
-                    choose us as their trusted IT partner</p>
+                <div id="collapse0" class="collapse display-text" [ngClass]="faqTog == i?'show':''">
+                  <p>{{item.ans}} </p>
 
                 </div>
               </div>

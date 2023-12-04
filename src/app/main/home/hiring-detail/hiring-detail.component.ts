@@ -81,24 +81,24 @@ export class HiringDetailComponent {
   hiringFaq: any = [
     {
       query: "Approaching talent pool",
-      ans: "01"
+      ans: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     },
     {
       query: "Cost savings",
-      ans: "02"
+      ans: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     },
     {
       query: "Maintain oversight",
-      ans: "03"
+      ans: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     },
     {
       query: "Reducing the time to market",
-      ans: "04"
+      ans: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     },
   ]
-  faqTog: number = 0
+  faqTog: number = -1
   hiringFaqMehod(i: number) {
-    this.faqTog = i
+    this.faqTog == i ? this.faqTog = -1 :this.faqTog = i
   }
 
   getEndsExperts(endName: string = "Front-End-Developer") {
