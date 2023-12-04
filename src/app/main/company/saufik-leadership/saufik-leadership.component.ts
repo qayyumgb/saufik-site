@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { headerDataDto } from 'src/app/constant/models/headerDataDto';
 
 @Component({
   selector: 'app-saufik-leadership',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./saufik-leadership.component.scss']
 })
 export class SaufikLeadershipComponent {
+  headertagData: headerDataDto={
+    title:"Our Leadership",
+    subTitle:"We believe in transforming not<br>only processes.",
+    tagline:"We create unique and fresh solutions."
+    
+  }
 leadership:any[] = [
   {
     title:"Moral Compass",
