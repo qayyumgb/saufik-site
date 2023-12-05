@@ -384,6 +384,19 @@
       max-width: 300px !important;
     }
   }
+  .service-card{
+    padding: 30px;
+  }
+  .w-layout-grid{
+    grid-row-gap: 0;
+    padding-top: 0;
+  }
+  .logo-grid{
+    padding: 0 30px;
+    img{
+      padding: 10px;
+    }
+  }
 }
 
 .faq-tab {

@@ -69,11 +69,15 @@
 }
 @media (max-width: 1024px){
     .footer-container{
+        text-align: center;
         .large-3.medium-12.cell{
             width: 100%;
         }
         .large-2.medium-12.cell{
             width: 100%;
+        }
+        &::before{
+            background-position: bottom;
         }
     }
 

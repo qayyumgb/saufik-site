@@ -1,3 +1,4 @@
+@import "../../../../assets/variable.scss";
 .dev-background {
     background-image: url(../../../../assets/images/career-banner.svg);
     background-repeat: no-repeat;
@@ -165,3 +166,8 @@
 .team-meeting{
     gap: 1.25rem;
 }
+@media (max-width: $mobile) {
+    .history-values-card-left-icon{
+        left: auto !important;
+    }
+   }

@@ -37,10 +37,13 @@
     grid-column-gap: 96px;
 }
 .list-box-aside-content{
+    position: sticky;
+    top: 100px;
+    transition: all 0.3s ease-in-out;
     .list-box-title{
         margin-bottom: 56px;
     text-align: left;
-    font-size: 4rem !important;
+    font-size: 4rem;
     line-height: 105% !important;
     font-weight: bold;
     span{
@@ -169,5 +172,15 @@
 @media (max-width: $mobile) {
    .links-box-wrap,.list-box-inner{
     grid-template-columns: auto;
+   }
+   .list-box-aside-content{
+    .list-box-title{
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+    .list-box-item{
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
    }
   }

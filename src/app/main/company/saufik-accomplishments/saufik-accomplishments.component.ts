@@ -7,9 +7,10 @@ import { headerDataDto } from 'src/app/constant/models/headerDataDto';
   styleUrls: ['./saufik-accomplishments.component.scss']
 })
 export class SaufikAccomplishmentsComponent {
-  headertagData:headerDataDto = {
-    title :"sadfs",
-    subTitle :"sdfdsd",
-    tagline :"dfasd",
+ headertagData: headerDataDto={
+    title:"Our Accomplishments",
+    subTitle:"Each new time you work on a project<br>you get something new to learn.",
+    tagline:"Join & grow with our team."
+    
   }
 }

@@ -1,3 +1,4 @@
+@import "../../../../assets/variable.scss";
 .dev-background {
   background-image: url(../../../../assets/images/careers-banner-image.gif);
   background-repeat: no-repeat;
@@ -109,3 +110,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media (max-width: $mobile) {
+  .job-grid{
+    grid-template-columns: 1fr;
+  }
+ }
