@@ -11,7 +11,7 @@ export class SaufikLeadershipComponent {
     title:"Our Leadership",
     subTitle:"We believe in transforming not<br>only processes.",
     tagline:"We create unique and fresh solutions."
-    
+
   }
 leadership:any[] = [
   {

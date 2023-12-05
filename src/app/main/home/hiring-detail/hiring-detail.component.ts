@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { headerDataDto } from 'src/app/constant/models/headerDataDto';
 import { JsonDataService } from 'src/app/services/json-data.service';
 
 @Component({
@@ -70,6 +71,12 @@ export class HiringDetailComponent {
         },
 
     }
+  }
+  headertagData: headerDataDto={
+    subTitle:"Build Your Offshore Team",
+    button:"Let's Start",
+    tagline:"Leading IT staff augmentation providers supplying software  engineers <br> and developers to ramp up your  development team quickly while meeting <br> your specific business needs. We have experts from various IT fields on"
+
   }
   constructor(private jsonService: JsonDataService) {
     this.jsonService.GetAllExperties().subscribe(e => {

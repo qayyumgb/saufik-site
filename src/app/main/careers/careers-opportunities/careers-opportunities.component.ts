@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { headerDataDto } from 'src/app/constant/models/headerDataDto';
 
 @Component({
   selector: 'app-careers-opportunities',
@@ -7,6 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./careers-opportunities.component.scss']
 })
 export class CareersOpportunitiesComponent {
+
+  headertagData: headerDataDto={
+    title:"Careers",
+    subTitle:"Join Our Team",
+    tagline:"Take your software engineering skills to the next level."
+
+  }
   WorkingEnviroment:any = [
     {
       icon:"fa-solid fa-house-laptop",

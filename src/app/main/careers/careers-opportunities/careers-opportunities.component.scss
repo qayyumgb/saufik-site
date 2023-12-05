@@ -21,18 +21,7 @@
   background-position: 100%;
   opacity: 0.6;
 }
-.background-overlay,
-.blue-overlay,.bg-banner {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-}
 
-.background-overlay {
-  background: linear-gradient(90deg, rgba(1, 75, 245, 0.71), rgba(3, 63, 206, 0.66)) !important;
-}
 
 .banner-text {
   position: relative;

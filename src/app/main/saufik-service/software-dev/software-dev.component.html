@@ -297,7 +297,7 @@
             <div class="col-lg-6">
               <div class="accordion d-flex flex-column gap-2" >
                 <ng-container *ngFor="let item of serviceDetailData?.faq;let i = index">
-                  <div [ngClass]="faqId == i ?'show':''" class="accordion ot-accordions faqAccord cursor-pointer  " id="accordionExample">
+                  <div [ngClass]="faqId == i ?'show':''" class="accordion ot-accordions faqAccord cursor-pointer  ">
                     <div class="card-header  acc-toggle " (click)="toggleAccordient(i)" id="heading0">
                         <div class="d-flex align-items-center text-decoration-none">
                             <i class="fa-solid fa-chevron-right mx-2"></i>

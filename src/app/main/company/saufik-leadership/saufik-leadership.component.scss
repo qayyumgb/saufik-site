@@ -2,6 +2,7 @@
     background-image: url(../../../../assets/images/career-banner.svg);
     background-repeat: no-repeat;
     background-size: cover !important;
+    background-size: cover !important;
     height: 70vh;
     background-position: 100%;
 }
@@ -16,6 +17,7 @@
 }
 
 .background-overlay {
+    background: linear-gradient(80deg, rgb(18 50 125 / 100%), rgba(3, 63, 206, 0.9));
     background: linear-gradient(80deg, rgb(18 50 125 / 100%), rgba(3, 63, 206, 0.9));
 }
 
@@ -57,7 +59,7 @@
     padding-right: 2rem;
     padding-top: 1.75rem;
     padding-left: 3rem;
-    padding-bottom: 6.5rem;   
+    padding-bottom: 6.5rem;
     .history-values-card-headline{
         font-size: 2rem;
         font-weight: 600;
@@ -106,7 +108,7 @@
 .team-heading{
   h2{
     font-size: 4rem;
-  }  
+  }
 }
 .team-card{
     .profile-img{
@@ -114,7 +116,7 @@
         height: 210px;
         border-radius: 6px;
     }
-  
+
 }
 .team-card-wrapper{
     .mic-svg{
@@ -158,7 +160,7 @@
             border-image-outset: 0.8rem;
            }
     }
-   
+
 }
 .team-meeting{
     gap: 1.25rem;

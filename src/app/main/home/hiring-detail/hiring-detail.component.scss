@@ -1,25 +1,5 @@
 @import "../../../../assets/variable.scss";
 
-.dev-background {
-  background-image: url(../../../../assets/images/career-banner.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 70vh;
-  background-position: 100%;
-}
-
-.background-overlay,
-.blue-overlay {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-}
-
-.background-overlay {
-  background: linear-gradient(90deg, rgba(1, 75, 245, 0.71), rgba(3, 63, 206, 0.90));
-}
 
 .banner-text {
   position: relative;

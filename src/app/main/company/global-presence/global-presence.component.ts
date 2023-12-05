@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { headerDataDto } from 'src/app/constant/models/headerDataDto';
 
 @Component({
   selector: 'app-global-presence',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./global-presence.component.scss']
 })
 export class GlobalPresenceComponent {
-
+  headertagData:headerDataDto = {
+    title :"sadfs",
+    subTitle :"sdfdsd",
+    tagline :"dfasd",
+  }
 }

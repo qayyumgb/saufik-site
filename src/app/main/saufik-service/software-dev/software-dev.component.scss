@@ -8,12 +8,9 @@
 //   background-position: 100%;
 // }
 .dev-background {
-  background-image: url(../../../../assets/images/On-demand-Teams-Banner-2_1.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(80deg, rgb(18 50 125 / 100%), rgba(3, 63, 206, 0.9));
+
   height: 70vh;
-  background-position: 100%;
-  background-size: 40%;
 }
 
 .background-overlay,
@@ -26,7 +23,12 @@
 }
 
 .background-overlay {
-  background: linear-gradient(80deg, rgb(18 50 125 / 100%), rgba(3, 63, 206, 0.9));
+  background-image: url(../../../../assets/images/Software-Development-Banner-1-1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  background-size: 40%;
+  opacity: .1;
 }
 
 .banner-text {
@@ -238,7 +240,7 @@
   border-bottom: 1px solid gray;
   padding-left: 0;
   transition: all .3s;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   &:hover {
     background-color: #1683ea;
@@ -262,16 +264,21 @@
 
 .faqAccord {
   user-select: none;
-
+  .acc-content{
+    transition: all ease-in-out .5s;
+    height: fit-content;
+  }
   &:not(.show) {
     .acc-content {
-      display: none;
+      max-height: 0px;
+      overflow: hidden;
+
     }
   }
 
   &.show {
     .acc-content {
-      display: block;
+      max-height: 300px;
       animation: faqAccord .5s ease-in-out;
       overflow: hidden;
     }

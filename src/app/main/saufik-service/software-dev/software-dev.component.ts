@@ -21,31 +21,31 @@ export class SoftwareDevComponent implements OnInit {
         this.loadComponentData();
       }
     });
-    
+
   }
 
   async ngOnInit() {debugger
-    
+
     console.log('param id',this.id)
     await this.loadComponentData();
     // console.log('services detail',this.serviceDetailData)
-    
+
   }
 
 async loadComponentData(){
   this.id = this.activatedRoute.snapshot.paramMap.get('id');
   this.dataService.GetAllServiceJson().subscribe((item:any) => {
     this.serviceDetailData = item.filter((services:ServiceDto) => services.id === this.id)[0]
-    
+
   })
- 
+
 }
 
 
   faqId:number = 0
   toggleAccordient(getId: any) {
-    this.faqId = getId
-    
+    this.faqId == getId?this.faqId = -1 : this.faqId = getId
+
   }
   customOptions: OwlOptions = {
     center: true,
